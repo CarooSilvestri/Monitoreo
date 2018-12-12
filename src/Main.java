@@ -25,7 +25,7 @@ public class Main extends Application {
 
 
         BorderPane root = new BorderPane();
-        VistaPantalla vistaPantalla = new VistaPantalla(root, 28); //pisos);
+        VistaPantalla vistaPantalla = new VistaPantalla(root, 28, 4); //pisos);
         vistaPantalla.dibujar();
 
 
