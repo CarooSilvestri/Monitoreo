@@ -1,99 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 
-<GridPane alignment="CENTER" hgap="5.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" stylesheets="@../rsc/principal.css" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Controller">
-   <columnConstraints>
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="60.0" minWidth="42.0" prefWidth="60.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="60.0" prefWidth="60.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-      <ColumnConstraints maxWidth="228.0" minWidth="-Infinity" prefWidth="200.0" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
-      <RowConstraints maxHeight="418.0" minHeight="420.0" prefHeight="420.0" />
-      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
-   </rowConstraints>
-   <children>
-      <ListView orientation="HORIZONTAL" prefHeight="200.0" prefWidth="22.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-      <Label alignment="CENTER" prefHeight="20.0" prefWidth="61.0" text="Ascensor 1" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" />
-      <Label text="Ascensor 2" GridPane.columnIndex="5" />
-      <Label text="Ascensor 4" GridPane.columnIndex="11" />
-      <ListView prefHeight="418.0" prefWidth="55.0" style="-fx-background-image: C:\Users\Carolina\Downloads;" GridPane.columnIndex="5" GridPane.rowIndex="1">
-           <items>
-               <FXCollections fx:factory="observableArrayList">
-                   <String fx:value="4800" />
-               </FXCollections>
-           </items>
-      </ListView>
-      <ListView prefHeight="200.0" prefWidth="38.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
-         <cursor>
-            <Cursor fx:constant="DISAPPEAR" />
-         </cursor></ListView>
-      <Label text="Ascensor 3" GridPane.columnIndex="8" />
-      <ListView prefHeight="397.0" prefWidth="42.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <ListView prefHeight="458.0" prefWidth="20.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
-      <ListView prefHeight="371.0" prefWidth="108.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="12" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="13" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
-      <ListView prefHeight="200.0" prefWidth="116.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-      <Accordion prefHeight="471.0" prefWidth="200.0" GridPane.columnIndex="14" GridPane.rowSpan="2">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <Accordion BorderPane.alignment="CENTER">
         <panes>
           <TitledPane animated="false" text="untitled 1">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="untitled 2">
-            <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ToggleButton layoutX="84.0" layoutY="76.0" mnemonicParsing="false" text="ToggleButton" />
-                     </children></AnchorPane>
+                        <CheckBox layoutX="12.0" layoutY="14.0" mnemonicParsing="false" text="CheckBox" />
+                        <CheckBox layoutX="12.0" layoutY="33.0" mnemonicParsing="false" text="CheckBox" />
+                        <Separator layoutY="76.0" prefWidth="200.0" />
+                        <CheckBox layoutX="12.0" layoutY="52.0" mnemonicParsing="false" text="CheckBox" />
+                        <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="86.0" prefHeight="124.0" prefWidth="167.0" text="Fallas">
+                           <graphic>
+                              <ScrollBar orientation="VERTICAL" />
+                           </graphic></Label>
+                     </children>
+                  </AnchorPane>
             </content>
           </TitledPane>
           <TitledPane animated="false" text="untitled 3">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutY="-11.0" prefHeight="200.0" prefWidth="200.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="untitled 2">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </TitledPane>
         </panes>
       </Accordion>
-      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1" />
-   </children>
-   <cursor>
-      <Cursor fx:constant="NW_RESIZE" />
-   </cursor>
-   <padding>
-      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-   </padding>
-</GridPane>
+   </right>
+</BorderPane>
