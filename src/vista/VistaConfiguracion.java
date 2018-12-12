@@ -47,7 +47,7 @@ public class VistaConfiguracion extends Accordion {
         separator.setOrientation(Orientation.HORIZONTAL);
 
         ScrollPane estadisticas = new ScrollPane();
-        estadisticas.setPrefSize(250,100);
+        estadisticas.setPrefSize(150,100);
         estadisticas.setFitToWidth(true);
         estadisticas.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 
@@ -84,7 +84,7 @@ public class VistaConfiguracion extends Accordion {
 
     private void formato() {
 
-        super.setMinWidth(250);
+        super.setMinWidth(200);
         this.setStyle("");
     }
 

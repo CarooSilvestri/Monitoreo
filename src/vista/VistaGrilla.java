@@ -9,31 +9,27 @@ import java.util.LinkedList;
 
 public class VistaGrilla extends GridPane {
 
-    private LinkedList<VistaAscensor> vistaAscensor;
     private VistaConfiguracion vistaConfiguracion;
 
     public VistaGrilla() {
 
         this.vistaConfiguracion = new VistaConfiguracion();
-
     }
-
 
     private void setearColumnas(LinkedList<VistaAscensor> vistaAscensor) {
 
         int i = 1;
         for (VistaAscensor vista : vistaAscensor) {
 
-            vista.numerarPisos();
+            vista.dibujarAscensor();
             Label LAscensor = new Label("Ascensor " + Integer.toString(i));
             LAscensor.setAlignment(Pos.CENTER);
             super.add(LAscensor, i, 0);
             super.add(vista, i, 1);
             i++;
         }
-        this.vistaConfiguracion.llenar(i);
-        this.vistaConfiguracion.setPadding(new Insets(0, 0, 0 , 15));
 
+        this.vistaConfiguracion.llenar(i);
         super.add(this.vistaConfiguracion, 6,1);
     }
 
@@ -43,7 +39,6 @@ public class VistaGrilla extends GridPane {
         super.add(LES, 0,0);
 
         Label configAscensores = new Label("Configuración y eventos de ascensores");
-        configAscensores.setPadding(new Insets(0, 0, 0 , 15));
         super.add(configAscensores, 6, 0);
 
         Label LEB = new Label("LE Bajar");
@@ -57,12 +52,12 @@ public class VistaGrilla extends GridPane {
         super.setVgap(5);
     }
 
-    public void dibujarGrilla(LinkedList<VistaAscensor> vistaAscensor) {
+    public void dibujarGrilla(LinkedList<VistaAscensor> vistaAscensorR) {
 
-        this.vistaAscensor = vistaAscensor;
+        LinkedList<VistaAscensor> vistaAscensor = vistaAscensorR;
 
         propGrilla();
         setearLabels();
-        setearColumnas(this.vistaAscensor);
+        setearColumnas(vistaAscensor);
     }
 }

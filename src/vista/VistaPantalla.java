@@ -37,6 +37,7 @@ public class VistaPantalla {
 
         setearAscensores(this.asc);
 
+        this.grilla.setGridLinesVisible(true);
         this.vistaMenu.dibujarMenu();
         this.grilla.dibujarGrilla(this.vistaAscensor);
         this.borderPrincipal.setCenter(this.grilla);

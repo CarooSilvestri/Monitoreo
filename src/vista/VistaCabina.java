@@ -1,6 +1,9 @@
 package vista;
 
+import javafx.geometry.Insets;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+
 
 public class VistaCabina extends VBox {
 
@@ -11,10 +14,27 @@ public class VistaCabina extends VBox {
         this.pisos = cantPisos;
     }
 
-    private void cabinas() {
+    public void cabinas() {
+
+        for (Integer i = this.pisos; i > 0; i--) {
+            Label label = new Label("         ");
+            super.getChildren().add(label);
+        }
+    }
+
+    private void formatoCabina() {
+
+        super.setStyle("-fx-background-color: black;" +
+                "-fx-font-size: 10px;");
+        super.setMaxWidth(35);
+        super.setPadding(new Insets(0, 2, 0,2));
 
     }
 
-    private void dibujarCabina() {}
+    public void dibujarCabina() {
+
+        cabinas();
+        formatoCabina();
+    }
 
 }
