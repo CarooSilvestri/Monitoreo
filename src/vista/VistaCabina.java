@@ -17,7 +17,7 @@ public class VistaCabina extends VBox {
     public void cabinas() {
 
         for (Integer i = this.pisos; i > 0; i--) {
-            Label label = new Label("         ");
+            Label label = new Label("");
             super.getChildren().add(label);
         }
     }
@@ -26,7 +26,7 @@ public class VistaCabina extends VBox {
 
         super.setStyle("-fx-background-color: black;" +
                 "-fx-font-size: 10px;");
-        super.setMaxWidth(35);
+        super.setMinWidth(50);
         super.setPadding(new Insets(0, 2, 0,2));
 
     }

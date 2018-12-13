@@ -17,7 +17,9 @@ public class VistaConfiguracion extends Accordion {
     public void llenar(int cant){
 
         for (int i = 1; i < cant; i++) {
+
             TitledPane tn = new TitledPane("Ascensor " + Integer.toString(i), opciones());
+            tn.setStyle("-fx-font-size: 9px;");
             super.getPanes().add(tn);
         }
         formato();
@@ -75,16 +77,20 @@ public class VistaConfiguracion extends Accordion {
         logStats.setTextAlignment(TextAlignment.LEFT);
 
         estadisticas.setContent(logStats);
+        Separator s = new Separator();
+        s.setOrientation(Orientation.HORIZONTAL);
 
-        VBox cajaConfig = new VBox(cbServInd, cbAscensorista, cbPpt, cbPuertaDis, cbAlarmaInc, cbFueraServ, separator, estadisticas);
+        VBox cajaConfig = new VBox(new Label("Configuración del ascensor:\n\nDesc 18P 2V AAAAA LDPC"),s,cbServInd, cbAscensorista, cbPpt, cbPuertaDis, cbAlarmaInc, cbFueraServ, separator, estadisticas);
         cajaConfig.setAlignment(Pos.CENTER_LEFT);
-        cajaConfig.setSpacing(10);
+        cajaConfig.setSpacing(5);
+
+        cajaConfig.setStyle("-fx-font-size: 10px;");
         return cajaConfig;
     }
 
     private void formato() {
 
-        super.setMinWidth(200);
+        super.setMinWidth(175);
         this.setStyle("");
     }
 

@@ -18,6 +18,7 @@ public class VistaMenu extends HBox {
         Button btnAL = new Button("Anulacion llamadas");
         Button btnAI = new Button("Alarma de incendio");
         btnAI.setStyle("-fx-background-color: red;" +
+                "-fx-font-size: 9px;" +
                 "-fx-text-fill: white;" +
                 "-fx-font-weight: bold;");
         Button btnSalir = new Button("Salir");
@@ -27,7 +28,8 @@ public class VistaMenu extends HBox {
         subh.setSpacing(15);
         super.setSpacing(320);
 
-        super.setStyle("-fx-background-color:  #336699;");
+        super.setStyle("-fx-background-color:  #336699;" +
+                "-fx-font-size: 9px;");
         super.setPadding(new Insets(5,0,5,15));
         super.setAlignment(Pos.CENTER_LEFT);
 

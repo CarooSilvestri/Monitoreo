@@ -1,11 +1,6 @@
 package vista;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.image.ImageView;
+import javafx.scene.Cursor;
 import javafx.scene.layout.GridPane;
 
 public class VistaAscensor extends GridPane {
@@ -13,16 +8,25 @@ public class VistaAscensor extends GridPane {
     private VistaParadas vistaParadasLado1;
     private VistaParadas vistaParadasLado2;
     private VistaCabina vistaCabina;
+    private VistaAsignadas asigLS1;
+    private VistaAsignadas asigLB1;
+    private VistaAsignadas asigLS2;
+    private VistaAsignadas asigLB2;
 
-    public VistaAscensor() {
+    public VistaAscensor(int pisos) {
 
-        this.vistaParadasLado1 = new VistaParadas(28);
-        this.vistaParadasLado2 = new VistaParadas(28);
-        this.vistaCabina = new VistaCabina(28);
+        this.vistaParadasLado1 = new VistaParadas(pisos);
+        this.vistaParadasLado2 = new VistaParadas(pisos);
+        this.asigLS1 = new VistaAsignadas(pisos);
+        this.asigLB1 = new VistaAsignadas(pisos);
+        this.asigLS2 = new VistaAsignadas(pisos);
+        this.asigLB2 = new VistaAsignadas(pisos);
+        this.vistaCabina = new VistaCabina(pisos);
     }
 
     private void formatoAscensor() {
 
+        super.setStyle(" -fx-border-color: black;");
         super.minWidth(100);
     }
 
@@ -31,18 +35,16 @@ public class VistaAscensor extends GridPane {
         this.vistaParadasLado1.numerarPisos();
         this.vistaParadasLado2.numerarPisos();
         this.vistaCabina.dibujarCabina();
-        VistaParadas p1 = new VistaParadas(28);
-        p1.numerarPisos();
-        VistaParadas p2 = new VistaParadas(28);
-        p2.numerarPisos();
-        VistaParadas p3 = new VistaParadas(28);
-        p3.numerarPisos();
-        VistaParadas p4 = new VistaParadas(28);
-        p4.numerarPisos();
-        super.add(p1, 0, 0);
-        super.add(p2, 1, 0);
-        super.add(p3, 2, 0);
-        super.add(p4, 3, 0);
+
+        this.asigLS1.generarCabinas();
+        this.asigLB1.generarCabinas();
+        this.asigLS2.generarCabinas();
+        this.asigLB2.generarCabinas();
+
+        super.add(this.asigLS1, 0, 0);
+        super.add(this.asigLB1, 1, 0);
+        super.add(this.asigLS2, 2, 0);
+        super.add(this.asigLB2, 3, 0);
         super.add(this.vistaCabina, 4, 0);
         super.add(this.vistaParadasLado1, 5, 0);
         super.add(this.vistaParadasLado2, 6, 0);
@@ -54,5 +56,4 @@ public class VistaAscensor extends GridPane {
         formatoAscensor();
         numerarPisos();
     }
-
 }

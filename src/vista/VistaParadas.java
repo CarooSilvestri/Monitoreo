@@ -26,7 +26,7 @@ public class VistaParadas extends VBox {
         super.setPadding(new Insets(0, 2, 0,2));
         super.setStyle("-fx-background-color: green;" +
                 "-fx-font-size: 10px;" +
-                "-fx-font-weight: bold;");
+                "-fx-font-weight: bold;" );
     }
 
     public void numerarPisos() {

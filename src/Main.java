@@ -40,15 +40,15 @@ public class Main extends Application {
         SerialPort serialPort = new SerialPort("COM3");
         try {
             serialPort.openPort();//Open serial port
-            serialPort.setParams(9600, 8, 1, 0);//Set params.
-            byte[] buffer = serialPort.readBytes();//Read 10 bytes from serial por
-            System.out.println(buffer);
+            serialPort.setParams(38400, 8, 2, 0);//Set params.
+            byte[] buffer = serialPort.readBytes(10);//Read 10 bytes from serial por
+            System.out.write(buffer, 0, 10);
             serialPort.closePort();//Close serial port
         }
         catch (SerialPortException ex) {
             System.out.println(ex);
         }
-       launch(args);
+        launch(args);
     }
 }
 

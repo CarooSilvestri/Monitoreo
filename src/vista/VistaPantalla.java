@@ -1,7 +1,8 @@
 package vista;
 
-
+import javafx.scene.control.Label;
 import javafx.scene.layout.*;
+
 
 import java.util.LinkedList;
 
@@ -10,7 +11,6 @@ public class VistaPantalla {
     private BorderPane borderPrincipal;
     private VistaGrilla grilla;
     private LinkedList<VistaAscensor> vistaAscensor;
-    private VistaConfiguracion vistaConfiguracion;
     private VistaMenu vistaMenu;
     private int pisos, asc;
 
@@ -19,7 +19,6 @@ public class VistaPantalla {
         this.borderPrincipal = principal;
         this.grilla = new VistaGrilla();
         this.vistaAscensor = new LinkedList<>();
-        this.vistaConfiguracion = new VistaConfiguracion();
         this.vistaMenu = new VistaMenu();
         this.pisos = pisos;
         this.asc = cantAsc;
@@ -29,7 +28,7 @@ public class VistaPantalla {
     public void setearAscensores(int cantAsensores){
 
         for (int i = 0; i < cantAsensores; i++) {
-            vistaAscensor.add(new VistaAscensor());
+            vistaAscensor.add(new VistaAscensor(this.pisos));
         }
     }
 
@@ -37,10 +36,10 @@ public class VistaPantalla {
 
         setearAscensores(this.asc);
 
-        this.grilla.setGridLinesVisible(true);
         this.vistaMenu.dibujarMenu();
         this.grilla.dibujarGrilla(this.vistaAscensor);
         this.borderPrincipal.setCenter(this.grilla);
         this.borderPrincipal.setTop(this.vistaMenu);
+
     }
 }
