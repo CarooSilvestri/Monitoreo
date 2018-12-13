@@ -3,7 +3,6 @@ package vista;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 
 import java.util.LinkedList;
 
@@ -27,11 +26,19 @@ public class VistaGrilla extends GridPane {
 
             vista.dibujarAscensor();
             Label LAscensor = new Label("Ascensor " + Integer.toString(i));
-            LAscensor.setStyle("-fx-font-size: 10px;");
+            LAscensor.setStyle("-fx-font-size: 10px;" +
+                    "-fx-font-weight: bold;");
             LAscensor.setAlignment(Pos.CENTER);
-            Label l2 = new Label("Evento ascensor");
-            l2.setStyle("-fx-font-size: 10px;");
-            super.add(l2, i, 2);
+            LAscensor.setMinWidth(100);
+
+            Label lEvento = new Label("Evento ascensor");
+            lEvento.setStyle("-fx-font-size: 10px;" +
+                    "-fx-background-color: #8cd98c;" +
+                    "-fx-font-weight: bold;");
+            lEvento.setAlignment(Pos.CENTER);
+            lEvento.setMinWidth(128);
+
+            super.add(lEvento, i, 2);
             super.add(LAscensor, i, 0);
             super.add(vista, i, 1);
             i++;
@@ -49,20 +56,33 @@ public class VistaGrilla extends GridPane {
     private void setearLabels() {
 
         Label LES = new Label("Subir");
-        LES.setStyle("-fx-font-size: 10px;");
+        LES.setStyle("-fx-font-size: 9px;" +
+                "-fx-font-weight: bold;");
+        LES.setAlignment(Pos.CENTER);
+        LES.setMinWidth(30);
         super.add(LES, 0,0);
 
         Label configAscensores = new Label("Configuración y eventos de ascensores");
-        configAscensores.setStyle("-fx-font-size: 9px;");
+        configAscensores.setStyle("-fx-font-size: 9px;" +
+                "-fx-font-weight: bold;");
+        configAscensores.setAlignment(Pos.CENTER);
+        configAscensores.setMinWidth(200);
         super.add(configAscensores, 6, 0);
 
         Label LEB = new Label("Bajar");
-        LEB.setStyle("-fx-font-size: 9px;");
+        LEB.setStyle("-fx-font-size: 9px;" +
+                "-fx-font-weight: bold;");
+        LEB.setMinWidth(30);
+        LEB.setAlignment(Pos.CENTER);
         super.add(LEB, 5,0);
 
-        Label l1 = new Label("Evento dsp");
-        l1.setStyle("-fx-font-size: 9px;");
-        super.add(l1,1, 3, 4,1);
+        Label lEventoDspc = new Label("Evento dsp");
+        lEventoDspc.setStyle("-fx-font-size: 9px;" +
+                "-fx-background-color: #8cd98c;" +
+                "-fx-font-weight: bold;");
+        lEventoDspc.setAlignment(Pos.CENTER);
+        lEventoDspc.setMinWidth(527);
+        super.add(lEventoDspc,1, 3, 4,1);
 
     }
 
