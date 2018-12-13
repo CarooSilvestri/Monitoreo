@@ -1,4 +1,4 @@
-package controladores;
+package controladores.controladoresMenu;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,10 +7,11 @@ import javafx.scene.control.ButtonType;
 
 import java.util.Optional;
 
-public class ControladorSalir implements EventHandler<ActionEvent> {
+public class ControladorAnulacionLlamadas implements EventHandler<ActionEvent> {
 
+        
     @Override
-    public void handle(ActionEvent event) {
+    public void handle(ActionEvent event, int[] pisos) {
         Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
         alerta.setTitle("Salir");
         alerta.setHeaderText(null);

@@ -1,8 +1,6 @@
 package vista;
 
-import javafx.scene.control.Label;
 import javafx.scene.layout.*;
-
 
 import java.util.LinkedList;
 
@@ -25,7 +23,7 @@ public class VistaPantalla {
     }
 
 
-    public void setearAscensores(int cantAsensores){
+    private void setearAscensores(int cantAsensores){
 
         for (int i = 0; i < cantAsensores; i++) {
             vistaAscensor.add(new VistaAscensor(this.pisos));

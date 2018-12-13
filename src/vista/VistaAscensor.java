@@ -1,6 +1,5 @@
 package vista;
 
-import javafx.scene.Cursor;
 import javafx.scene.layout.GridPane;
 
 public class VistaAscensor extends GridPane {
@@ -30,7 +29,7 @@ public class VistaAscensor extends GridPane {
         super.minWidth(100);
     }
 
-    public void numerarPisos() {
+    private void numerarPisos() {
 
         this.vistaParadasLado1.numerarPisos();
         this.vistaParadasLado2.numerarPisos();

@@ -1,6 +1,6 @@
 package controladores;
 
-import java.beans.EventHandler;
-
 public class ControladorServicioIndependiente extends ControladorCheckbox {
+    public static class ControladorAlarmaIncendio extends ControladorCheckbox {
+    }
 }

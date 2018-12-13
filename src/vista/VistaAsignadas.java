@@ -1,12 +1,8 @@
 package vista;
 
-import controladores.ControladorLlamada;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 
 public class VistaAsignadas extends VBox {
 
@@ -19,7 +15,7 @@ public class VistaAsignadas extends VBox {
 
     private void formato() {
 
-        super.setMaxWidth(15);
+        super.setMaxWidth(22);
         super.setStyle("-fx-background-color: Black;" +
                 "-fx-font-size: 10px;");
     }
@@ -30,8 +26,7 @@ public class VistaAsignadas extends VBox {
             Label l = new Label(" ");
             l.setMinWidth(11);
             super.getChildren().add(l);
-
-             super.setAlignment(Pos.BOTTOM_CENTER);
+            super.setAlignment(Pos.BOTTOM_CENTER);
 
         }
         formato();

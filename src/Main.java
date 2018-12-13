@@ -1,17 +1,10 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.SplitPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import jssc.SerialPort;
-import jssc.SerialPortException;
-import jssc.SerialPortList;
 import modelo.DatosEntrantes;
 import vista.VistaPantalla;
-
-import javax.xml.bind.DatatypeConverter;
 
 public class Main extends Application {
 
@@ -37,7 +30,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        SerialPort serialPort = new SerialPort("COM3");
+       /* SerialPort serialPort = new SerialPort("COM3");
         try {
             serialPort.openPort();//Open serial port
             serialPort.setParams(38400, 8, 2, 0);//Set params.
@@ -47,7 +40,7 @@ public class Main extends Application {
         }
         catch (SerialPortException ex) {
             System.out.println(ex);
-        }
+        }*/
         launch(args);
     }
 }
