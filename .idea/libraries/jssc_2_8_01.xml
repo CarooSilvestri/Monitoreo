@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jssc-2.8.01">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/Java/jssc-2.8.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Java/jssc.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Java/rxtx-2.1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -9,9 +9,16 @@ import java.util.Optional;
 
 public class ControladorAnulacionLlamadas implements EventHandler<ActionEvent> {
 
-        
+    private int[] pisos;
+
+    public ControladorAnulacionLlamadas(int[] pisos) {
+
+        this.pisos = pisos;
+    }
+
     @Override
-    public void handle(ActionEvent event, int[] pisos) {
+    public void handle(ActionEvent event) {
+
         Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
         alerta.setTitle("Salir");
         alerta.setHeaderText(null);

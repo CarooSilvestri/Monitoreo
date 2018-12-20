@@ -1,10 +1,18 @@
+import gnu.io.PortInUseException;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import jssc.SerialPort;
 import modelo.DatosEntrantes;
 import vista.VistaPantalla;
+
+import gnu.io.CommPort;
+import gnu.io.CommPortIdentifier;
+import gnu.io.*;
+
+import java.io.IOException;
+import java.util.Enumeration;
+
 
 public class Main extends Application {
 
@@ -12,8 +20,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
 
-        SerialPort serialPort = new SerialPort("COM3");
-        DatosEntrantes datos = new DatosEntrantes(serialPort);
+       // SerialPort serialPort = new SerialPort("COM3");
+       // DatosEntrantes datos = new DatosEntrantes(serialPort);
 //        datos.nada();
 
 
@@ -30,17 +38,24 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-       /* SerialPort serialPort = new SerialPort("COM3");
-        try {
-            serialPort.openPort();//Open serial port
-            serialPort.setParams(38400, 8, 2, 0);//Set params.
-            byte[] buffer = serialPort.readBytes(10);//Read 10 bytes from serial por
-            System.out.write(buffer, 0, 10);
-            serialPort.closePort();//Close serial port
+
+        Enumeration listaPuertos = CommPortIdentifier.getPortIdentifiers();
+        CommPortIdentifier idPuerto = null;
+        boolean encontrado = false;
+        while (listaPuertos.hasMoreElements() && !encontrado) {
+            idPuerto = (CommPortIdentifier) listaPuertos.nextElement();
+            if (idPuerto.getPortType() == CommPortIdentifier.PORT_SERIAL) {
+                if (idPuerto.getName().equals("COM3")) {
+                    encontrado = true;
+                }
+            }
         }
-        catch (SerialPortException ex) {
-            System.out.println(ex);
-        }*/
+        try {
+           SerialPort puertoSerie = (SerialPort) idPuerto.open( "COM3",2000 );
+        } catch( PortInUseException e ) {
+            System.out.println("Error abriendo el puerto serie");
+        }
+
         launch(args);
     }
 }

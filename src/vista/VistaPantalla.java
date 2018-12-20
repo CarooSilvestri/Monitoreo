@@ -11,13 +11,14 @@ public class VistaPantalla {
     private LinkedList<VistaAscensor> vistaAscensor;
     private VistaMenu vistaMenu;
     private int pisos, asc;
+    public int[] p = {1,2,3};
 
     public VistaPantalla(BorderPane principal, int pisos, int cantAsc) {
 
         this.borderPrincipal = principal;
         this.grilla = new VistaGrilla();
         this.vistaAscensor = new LinkedList<>();
-        this.vistaMenu = new VistaMenu();
+        this.vistaMenu = new VistaMenu(p);
         this.pisos = pisos;
         this.asc = cantAsc;
     }
