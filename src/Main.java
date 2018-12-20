@@ -39,22 +39,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        Enumeration listaPuertos = CommPortIdentifier.getPortIdentifiers();
-        CommPortIdentifier idPuerto = null;
-        boolean encontrado = false;
-        while (listaPuertos.hasMoreElements() && !encontrado) {
-            idPuerto = (CommPortIdentifier) listaPuertos.nextElement();
-            if (idPuerto.getPortType() == CommPortIdentifier.PORT_SERIAL) {
-                if (idPuerto.getName().equals("COM3")) {
-                    encontrado = true;
-                }
-            }
-        }
-        try {
-           SerialPort puertoSerie = (SerialPort) idPuerto.open( "COM3",2000 );
-        } catch( PortInUseException e ) {
-            System.out.println("Error abriendo el puerto serie");
-        }
 
         launch(args);
     }

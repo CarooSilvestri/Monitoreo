@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Monitoreo" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="87a47152-73d0-4150-b3be-7cf9506f4801" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jssc_2_8_01.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/AlarmaDeIncendio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/Cabina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/AscensorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Monitoreo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/rxtx_2_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jssc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jssc_2_8_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monitoreo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoreo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/Ascensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/Ascensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaPantalla.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaPantalla.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controladores/controladoresMenu/ControladorAnulacionLlamadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/controladoresMenu/ControladorAnulacionLlamadas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Ascensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Ascensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/VistaPantalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/VistaPantalla.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +34,8 @@
     <session id="-110272270">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.112" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
@@ -46,20 +48,20 @@
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
           <entry key="fxml" value="12" />
-          <entry key="java" value="72" />
+          <entry key="java" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="JAVA" value="72" />
+          <entry key="JAVA" value="73" />
           <entry key="XML" value="12" />
         </counts>
       </usages-collector>
@@ -67,19 +69,32 @@
         <counts>
           <entry key="dummy" value="5" />
           <entry key="java" value="10965" />
-          <entry key="txt" value="150" />
+          <entry key="txt" value="162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="10965" />
-          <entry key="PLAIN_TEXT" value="155" />
+          <entry key="PLAIN_TEXT" value="167" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,21 +174,40 @@
               <item name="Monitoreo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Monitoreo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Monitoreo" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
+          <expand>
+            <path>
+              <item name="Monitoreo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Monitoreo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Monitoreo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Monitoreo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545240183423" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545313753330" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Java/rxtx-2.1.7.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -267,13 +302,20 @@
       <option name="project" value="LOCAL" />
       <updated>1544727298457</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modificando">
+      <created>1545311248347</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545311248347</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1899696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19300912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -342,7 +384,8 @@
     <MESSAGE value="Controlador salir y llamadas asignadas" />
     <MESSAGE value="hay que hacer muchos cambios en los labels" />
     <MESSAGE value="diseño terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="diseño terminado" />
+    <MESSAGE value="Modificando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificando" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/TestAscensor.java" />
@@ -550,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/Ascensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -588,12 +621,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Monitoreo</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -653,7 +697,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jssc-2.8.01</last-edited>
+          <last-edited>rxtx-2.1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
