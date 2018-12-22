@@ -3,15 +3,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import modelo.DatosEntrantes;
 import vista.VistaPantalla;
-
-import gnu.io.CommPort;
-import gnu.io.CommPortIdentifier;
-import gnu.io.*;
-
-import java.io.IOException;
-import java.util.Enumeration;
 
 
 public class Main extends Application {
@@ -36,6 +28,9 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+
+
+
 
     public static void main(String[] args) {
 
