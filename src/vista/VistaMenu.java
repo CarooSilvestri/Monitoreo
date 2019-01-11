@@ -1,19 +1,25 @@
+/*
 package vista;
 
-import controladores.controladoresMenu.ControladorAnulacionLlamadas;
-import controladores.controladoresMenu.ControladorSalir;
+import controladores.controladores_menu.ControladorAlarmaIncendio;
+import controladores.controladores_menu.ControladorAnulacionLlamadas;
+import controladores.controladores_menu.ControladorSalir;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
+import java.util.LinkedList;
+
 public class VistaMenu extends HBox {
 
     private int[] pisos;
+    private LinkedList<VistaAscensor> ascensor;
 
-    public VistaMenu(int[] pisos) {
+    public VistaMenu(int[] pisos, LinkedList<VistaAscensor> ascensor) {
 
         this.pisos = pisos;
+        this.ascensor = ascensor;
     }
 
     private void barraMenu() {
@@ -21,13 +27,15 @@ public class VistaMenu extends HBox {
         Button btnCS = new Button("Configuración del sistema");
 
         Button btnAL = new Button("Anulacion llamadas");
-        btnAL.setOnAction(new ControladorAnulacionLlamadas(this.pisos));
+        btnAL.setOnAction(new ControladorAnulacionLlamadas(ascensor));
 
         Button btnAI = new Button("Alarma de incendio");
         btnAI.setStyle("-fx-background-color: red;" +
                 "-fx-font-size: 9px;" +
                 "-fx-text-fill: white;" +
                 "-fx-font-weight: bold;");
+        btnAI.setOnAction(new ControladorAlarmaIncendio());
+
         Button btnSalir = new Button("Salir");
         btnSalir.setOnAction(new ControladorSalir());
 
@@ -48,3 +56,4 @@ public class VistaMenu extends HBox {
         this.barraMenu();
     }
 }
+*/

@@ -1,6 +1,10 @@
+/*
 package vista;
 
+import controladores.controladores_ascensor.ControladorAscensor;
+import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
+import modelo.ascensor.Ascensor;
 
 public class VistaAscensor extends GridPane {
 
@@ -11,8 +15,10 @@ public class VistaAscensor extends GridPane {
     private VistaAsignadas asigLB1;
     private VistaAsignadas asigLS2;
     private VistaAsignadas asigLB2;
+    private int pisos;
+    private ControladorAscensor controladorAscensor;
 
-    public VistaAscensor(int pisos) {
+    public VistaAscensor(int pisos, Ascensor ascensor) {
 
         this.vistaParadasLado1 = new VistaParadas(pisos);
         this.vistaParadasLado2 = new VistaParadas(pisos);
@@ -20,13 +26,17 @@ public class VistaAscensor extends GridPane {
         this.asigLB1 = new VistaAsignadas(pisos);
         this.asigLS2 = new VistaAsignadas(pisos);
         this.asigLB2 = new VistaAsignadas(pisos);
-        this.vistaCabina = new VistaCabina(pisos);
+        this.vistaCabina = new VistaCabina(pisos, ascensor);
+        this.pisos = pisos;
+        this.controladorAscensor = new ControladorAscensor(ascensor, this);
     }
 
     private void formatoAscensor() {
 
-        super.setStyle(" -fx-border-color: black;");
+        super.setStyle(" -fx-border-color: black;" +
+                "-fx-background-color: black;");
         super.minWidth(100);
+        super.setAlignment(Pos.BOTTOM_CENTER);
     }
 
     private void numerarPisos() {
@@ -47,7 +57,11 @@ public class VistaAscensor extends GridPane {
         super.add(this.vistaCabina, 4, 0);
         super.add(this.vistaParadasLado1, 5, 0);
         super.add(this.vistaParadasLado2, 6, 0);
+    }
 
+    public int getPisos() {
+
+        return this.pisos;
     }
 
     public void dibujarAscensor() {
@@ -56,3 +70,4 @@ public class VistaAscensor extends GridPane {
         numerarPisos();
     }
 }
+*/

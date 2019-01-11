@@ -1,6 +1,6 @@
-package vista;
+/*package vista;
 
-import controladores.ControladorLlamada;
+import controladores.controladores_ascensor.ControladorLlamadaCabina;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -30,8 +30,8 @@ public class VistaParadas extends VBox {
         for (int i = pisosTotales; i > 0; i--) {
             Label label = new Label(Integer.toString(i));
             label.setTextFill(Color.WHITE);
-            label.setOnMouseClicked(new ControladorLlamada());
             super.getChildren().add(label);
+            super.setOnMouseClicked(new ControladorLlamadaCabina(i));
             super.setAlignment(Pos.BOTTOM_CENTER);
         }
         formato();
@@ -39,4 +39,4 @@ public class VistaParadas extends VBox {
 
 
 
-}
+}*/
