@@ -1,8 +1,10 @@
+/*
 package vista;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import modelo.ascensor.Ascensor;
 
 import java.util.LinkedList;
 
@@ -12,10 +14,10 @@ public class VistaGrilla extends GridPane {
     private VistaLlamadasExteriores vistaLlamadasExterioresSubir;
     private VistaLlamadasExteriores vistaLlamadasExterioresBajar;
 
-    public VistaGrilla() {
+    public VistaGrilla(int pisos, LinkedList<Ascensor> ascensores) {
 
-        this.vistaLlamadasExterioresSubir = new VistaLlamadasExteriores(28);
-        this.vistaLlamadasExterioresBajar = new VistaLlamadasExteriores(28);
+        this.vistaLlamadasExterioresSubir = new VistaLlamadasExteriores(pisos);
+        this.vistaLlamadasExterioresBajar = new VistaLlamadasExteriores(pisos);
         this.vistaConfiguracion = new VistaConfiguracion();
     }
 
@@ -53,7 +55,7 @@ public class VistaGrilla extends GridPane {
         super.add(this.vistaLlamadasExterioresBajar, 5, 1);
     }
 
-    private void setearLabels() {
+    private void setearLabels(LinkedList<VistaAscensor> asc) {
 
         Label LES = new Label("Subir");
         LES.setStyle("-fx-font-size: 9px;" +
@@ -81,8 +83,8 @@ public class VistaGrilla extends GridPane {
                 "-fx-background-color: #8cd98c;" +
                 "-fx-font-weight: bold;");
         lEventoDspc.setAlignment(Pos.CENTER);
-        lEventoDspc.setMinWidth(527);
-        super.add(lEventoDspc,1, 3, 4,1);
+        lEventoDspc.setMaxWidth(527);
+        super.add(lEventoDspc,1, 3, asc.size(),1);
 
     }
 
@@ -92,12 +94,13 @@ public class VistaGrilla extends GridPane {
         super.setHgap(5);
     }
 
-    public void dibujarGrilla(LinkedList<VistaAscensor> vistaAscensorR) {
+    public void dibujarGrilla(LinkedList<VistaAscensor> vistaAscensores) {
 
-        LinkedList<VistaAscensor> vistaAscensor = vistaAscensorR;
+        LinkedList<VistaAscensor> vistaAscensor = vistaAscensores;
 
         propGrilla();
-        setearLabels();
+        setearLabels(vistaAscensor);
         setearColumnas(vistaAscensor);
     }
 }
+*/
