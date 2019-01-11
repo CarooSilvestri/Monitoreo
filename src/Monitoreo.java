@@ -48,6 +48,8 @@ public class Monitoreo extends Application {
                 try {
                     aux = entrada.read();
                     if ( aux >= 0 ){
+                        System.out.print(Integer.toBinaryString(aux) + "\n");
+
                         i++;
                     }
                 } catch (Exception e) {
