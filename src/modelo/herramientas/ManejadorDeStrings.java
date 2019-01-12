@@ -5,7 +5,7 @@ public class ManejadorDeStrings {
     public char[] invertirString(String string) {
 
         char[] resultado = string.toCharArray();
-return resultado;
+        return resultado;
 
     }
 

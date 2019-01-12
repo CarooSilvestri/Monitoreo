@@ -4,7 +4,7 @@ import modelo.herramientas.ManejadorDeStrings;
 
 import java.util.LinkedList;
 
-public class ManejadorDeLlamadas {
+public class ManejadorDeLlamadas extends LinkedList<Integer> {
 
     private ManejadorDeStrings manejadorDeStrings;
 
@@ -13,7 +13,7 @@ public class ManejadorDeLlamadas {
         this.manejadorDeStrings = new ManejadorDeStrings();
     }
 
-    public void setLlamadas(int pos1, int pos2, int pos3, int pos4, LinkedList<Integer> listaAct) {
+    private void setLlamadas(int pos1, int pos2, int pos3, int pos4) {
 
         String str1 = Integer.toString(pos4);
         String str2 = Integer.toString(pos3);
@@ -26,7 +26,13 @@ public class ManejadorDeLlamadas {
         int j = 33;
         for (int i = llamadas.length(); i > 0; i--) {
 
-            if (llamadas.charAt(i) == 1) listaAct.add(Math.abs(i - j));
+            if (llamadas.charAt(i) == 1) super.add(Math.abs(i - j));
         }
+    }
+
+    public LinkedList<Integer> getListaLLamadas(int pos1, int pos2, int pos3, int pos4) {
+
+        setLlamadas(pos1, pos2, pos3, pos4);
+        return this;
     }
 }

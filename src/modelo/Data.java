@@ -20,26 +20,28 @@ public class Data {
 
     public void acomodarDatosEntrantes() {
 
-        for (int[] asc : datosEntrantes) {
+        for (int[] datosAscensor : datosEntrantes) {
 
-            if (validaciones(asc)) {
-                if (asc[1] == 00) {
+            if (validaciones(datosAscensor)) {
+                if (datosAscensor[1] == 00) {
                     // DPC
-                    if (asc[0] == 40) {
+                    if (datosAscensor[0] == 40) {
+
                         this.despacho = new Despacho();
-                        this.despacho.actualizar(asc);
+                        this.despacho.actualizar(datosAscensor);
                     // ASCENSORES
-                    }else if (this.ascensores.containsKey(asc[0])) {
-                        this.ascensores.get(asc[0]).actualizar(asc);
+                    }else if (this.ascensores.containsKey(datosAscensor[0])) {
+
+                        this.ascensores.get(datosAscensor[0]).actualizar(datosAscensor);
                     } else {
-                        this.ascensores.put(asc[0], new Ascensor());
-                        this.ascensores.get(asc[0]).actualizar(asc);
+
+                        this.ascensores.put(datosAscensor[0], new Ascensor());
+                        this.ascensores.get(datosAscensor[0]).actualizar(datosAscensor);
                     }
                 }
             }
         }
     }
-
 
     private boolean validaciones(int[] asc) {
 
@@ -59,5 +61,10 @@ public class Data {
     public HashMap<Integer, Ascensor> getAscensores() {
 
         return this.ascensores;
+    }
+
+    public Despacho getDespacho() {
+
+        return this.despacho;
     }
 }

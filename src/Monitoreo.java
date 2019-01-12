@@ -1,6 +1,6 @@
 import controladores.ControladorMonitoreo;
-import gnu.io.CommPortIdentifier;
-import gnu.io.SerialPort;
+/*import gnu.io.CommPortIdentifier;
+import gnu.io.SerialPort;*/
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -16,9 +16,9 @@ public class Monitoreo extends Application {
 
     Data datos;
     LinkedList<int[]> dataTotal;
-    CommPortIdentifier portId;
+    //CommPortIdentifier portId;
     Enumeration puertos;
-    SerialPort serialport;
+    //SerialPort serialport;
     static InputStream entrada = null;
     Thread t;
 
