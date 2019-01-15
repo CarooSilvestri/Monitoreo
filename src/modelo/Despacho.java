@@ -5,10 +5,8 @@ import java.util.LinkedList;
 
 public class Despacho {
 
-    private int maxCantParadas = 32;
     private ManejadorDeLlamadas manejadorDeLlamadas;
     private HashMap<String, LinkedList<Integer>> llamadas;
-
 
     public Despacho() {
 

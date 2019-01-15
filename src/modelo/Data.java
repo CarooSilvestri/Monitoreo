@@ -8,11 +8,11 @@ import java.util.LinkedList;
 
 public class Data {
 
-    private LinkedList<int[]> datosEntrantes;
+    private LinkedList<LinkedList<Integer>> datosEntrantes;
     private HashMap<Integer, Ascensor> ascensores;
     private Despacho despacho;
 
-    public Data(LinkedList<int[]> datosEntrantes) {
+    public Data(LinkedList<LinkedList<Integer>> datosEntrantes) {
 
         this.datosEntrantes = datosEntrantes;
         this.ascensores = new HashMap<Integer, Ascensor>();
@@ -20,8 +20,11 @@ public class Data {
 
     public void acomodarDatosEntrantes() {
 
-        for (int[] datosAscensor : datosEntrantes) {
-
+        for (LinkedList<Integer> datosAscensor : datosEntrantes) {
+            if (validaciones(datosAscensor))     System.out.println(datosAscensor);
+            else System.out.println("hola");
+        }
+/*
             if (validaciones(datosAscensor)) {
                 if (datosAscensor[1] == 00) {
                     // DPC
@@ -40,18 +43,18 @@ public class Data {
                     }
                 }
             }
-        }
+        }*/
     }
 
-    private boolean validaciones(int[] asc) {
+    private boolean validaciones(LinkedList<Integer> asc) {
 
         boolean flag = false;
 
         // VER TODAS LAS VALIDACIONES
         try {
-            if (asc.length == 94) flag = true;
-            if (asc[0] == 40) flag = true;
-            if (asc[93] == 19) flag = true;
+            if (asc.size() == 94) flag = true;
+            if (asc.getFirst() > 60) flag = true;
+            if (asc.getFirst() == 170) flag = true;
         } catch (PaqueteCorrompidoError e) {
 
         }

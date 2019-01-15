@@ -21,12 +21,11 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
         String str4 = Integer.toString(pos1);
 
         String llamadas = this.manejadorDeStrings.concatenarStr(str1, str2, str3, str4);
-        llamadas.toCharArray();
 
         int j = 33;
         for (int i = llamadas.length(); i > 0; i--) {
-
-            if (llamadas.charAt(i) == 1) super.add(Math.abs(i - j));
+            System.out.println(llamadas.length());
+            if (llamadas.charAt(i) == '0') super.add(Math.abs(i - j));
         }
     }
 
