@@ -64,10 +64,10 @@ public class Monitoreo extends Application {
                             this.dataTotal.add(datos);
                             datos = new LinkedList<Integer>();
                         }
-                        if (dataTotal.size() == 5) {
+                        if (dataTotal.size() ==1) {
                             //  Data data = new Data(dataTotal);
                             // data.acomodarDatosEntrantes();
-                            System.out.println(i + "---->" + dataTotal);
+                            System.out.println(dataTotal);
                         }
                         i++;        
                     }
