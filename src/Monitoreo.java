@@ -5,9 +5,15 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import jssc.SerialPortException;
 import modelo.Data;
 //import vista.VistaPantalla;
+import javax.xml.bind.DatatypeConverter;
+import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
 import java.util.LinkedList;
 
@@ -29,20 +35,21 @@ public class Monitoreo extends Application {
         while (puertos.hasMoreElements()) {
             portId = (CommPortIdentifier) puertos.nextElement();
         }
-        if (portId.getName().equalsIgnoreCase("COM3")) {
+        if (portId.getName().equalsIgnoreCase("COM4")) {
             try {
-               serialport = (SerialPort) portId.open("LecturaSerial", 0);
-               serialport.setSerialPortParams(38400, SerialPort.DATABITS_8, SerialPort.STOPBITS_2, SerialPort.PARITY_NONE);
-               serialport.setFlowControlMode(SerialPort.FLOWCONTROL_NONE);
-               entrada = serialport.getInputStream();
-               t.start();
+                serialport = (SerialPort) portId.open("LecturaSerial", 0);
+                serialport.setSerialPortParams(38400, SerialPort.DATABITS_8, SerialPort.STOPBITS_2, SerialPort.PARITY_NONE);
+                serialport.setFlowControlMode(SerialPort.FLOWCONTROL_NONE);
+                serialport.disableReceiveTimeout();
+                entrada = serialport.getInputStream();
+                t.start();
             } catch (Exception e) {
 
             }
         }
-   }
+    }
 
-   public static class LeerDatos implements Runnable {
+    public static class LeerDatos implements Runnable {
 
         LinkedList<LinkedList<Integer>> dataTotal = new LinkedList<LinkedList<Integer>>();
         LinkedList<Integer> datos = new LinkedList<Integer>();
@@ -52,9 +59,9 @@ public class Monitoreo extends Application {
 
             while (true) {
 
-               try {
+                try {
 
-                   aux = entrada.read();
+                    aux = entrada.read();
 
                     if ( aux >= 0 ){
                         if (aux != 170){
@@ -62,14 +69,16 @@ public class Monitoreo extends Application {
                             datos.add(aux);
                         } else {
                             this.dataTotal.add(datos);
+                           // System.out.println(datos);
                             datos = new LinkedList<Integer>();
                         }
-                        if (dataTotal.size() ==1) {
+                        if (dataTotal.size() == 5) {
                             //  Data data = new Data(dataTotal);
                             // data.acomodarDatosEntrantes();
                             System.out.println(dataTotal);
+                            this.dataTotal = new LinkedList<LinkedList<Integer>>();
                         }
-                        i++;        
+                        i++;
                     }
                     entrada.reset();
                 } catch (Exception e) {
@@ -77,7 +86,7 @@ public class Monitoreo extends Application {
                 }
             }
         }
-   }
+    }
 
 
     @Override
@@ -85,10 +94,10 @@ public class Monitoreo extends Application {
 
         BorderPane root = new BorderPane();
 
-       // this.datos = new Data(dataTotal);
+        // this.datos = new Data(dataTotal);
 
-      //  VistaPantalla vistaPantalla = new VistaPantalla(root, 10, this.datos.getAscensores());
-      //  vistaPantalla.dibujar();
+        //  VistaPantalla vistaPantalla = new VistaPantalla(root, 10, this.datos.getAscensores());
+        //  vistaPantalla.dibujar();
 
         Scene scene = new Scene(root,800, 480);
         primaryStage.setTitle("Monitoreo SILCON");
@@ -100,9 +109,10 @@ public class Monitoreo extends Application {
     public static void main(String[] args) {
 
         new Monitoreo();
-       // launch(args);
+        // launch(args);
     }
 }
+
 
 
 
