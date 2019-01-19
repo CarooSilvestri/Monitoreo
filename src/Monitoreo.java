@@ -55,7 +55,6 @@ public class Monitoreo extends Application {
         LinkedList<LinkedList<Integer>> dataTotal = new LinkedList<LinkedList<Integer>>();
         LinkedList<Integer> datos = new LinkedList<Integer>();
         int aux;
-        LinkedList<String> s = new LinkedList<String>();
 
         public void run(){
 
@@ -69,13 +68,11 @@ public class Monitoreo extends Application {
                         if (this.aux != 170) {
 
                             this.datos.add(this.aux);
-                            s.add(Integer.toBinaryString(this.aux));
 
                         } else {
 
                             this.dataTotal.add(this.datos);
-                           System.out.println(s.get(26 ));
-                           s=new LinkedList<String>();
+                            System.out.println(datos);
                             this.datos = new LinkedList<Integer>();
                         }
                         if (this.dataTotal.size() == 5) {
