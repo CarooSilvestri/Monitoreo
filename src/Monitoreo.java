@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import jssc.SerialPortException;
 import modelo.Data;
+import modelo.herramientas.ManejadorDeStrings;
 //import vista.VistaPantalla;
 import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
@@ -53,7 +54,8 @@ public class Monitoreo extends Application {
 
         LinkedList<LinkedList<Integer>> dataTotal = new LinkedList<LinkedList<Integer>>();
         LinkedList<Integer> datos = new LinkedList<Integer>();
-        int aux, i = 0;
+        int aux;
+        LinkedList<String> s = new LinkedList<String>();
 
         public void run(){
 
@@ -61,26 +63,28 @@ public class Monitoreo extends Application {
 
                 try {
 
-                    aux = entrada.read();
+                    this.aux = entrada.read();
 
-                    if ( aux >= 0 ){
-                        if (aux != 170){
+                    if (this.aux >= 0) {
+                        if (this.aux != 170) {
 
-                            datos.add(aux);
+                            this.datos.add(this.aux);
+                            s.add(Integer.toBinaryString(this.aux));
+
                         } else {
-                            this.dataTotal.add(datos);
-                           // System.out.println(datos);
-                            datos = new LinkedList<Integer>();
+
+                            this.dataTotal.add(this.datos);
+                           System.out.println(s.get(26 ));
+                           s=new LinkedList<String>();
+                            this.datos = new LinkedList<Integer>();
                         }
-                        if (dataTotal.size() == 5) {
-                            //  Data data = new Data(dataTotal);
-                            // data.acomodarDatosEntrantes();
-                            System.out.println(dataTotal);
+                        if (this.dataTotal.size() == 5) {
+
+                            Data data = new Data(this.dataTotal);
+                            data.acomodarDatosEntrantes();
                             this.dataTotal = new LinkedList<LinkedList<Integer>>();
                         }
-                        i++;
                     }
-                    entrada.reset();
                 } catch (Exception e) {
 
                 }

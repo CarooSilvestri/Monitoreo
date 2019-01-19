@@ -7,6 +7,7 @@ import java.util.LinkedList;
 public class ManejadorDeLlamadas extends LinkedList<Integer> {
 
     private ManejadorDeStrings manejadorDeStrings;
+    private int MAX_LEN = 8;
 
     public ManejadorDeLlamadas() {
 
@@ -15,10 +16,12 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
 
     private void setLlamadas(int pos1, int pos2, int pos3, int pos4) {
 
-        String str1 = Integer.toString(pos4);
-        String str2 = Integer.toString(pos3);
-        String str3 = Integer.toString(pos2);
-        String str4 = Integer.toString(pos1);
+
+        String str1 = this.manejadorDeStrings.leadingZeros(pos4);
+        String str2 = this.manejadorDeStrings.leadingZeros(pos3);
+        String str3 = this.manejadorDeStrings.leadingZeros(pos2);
+        String str4 = this.manejadorDeStrings.leadingZeros(pos1);
+
 
         String llamadas = this.manejadorDeStrings.concatenarStr(str1, str2, str3, str4);
 
@@ -29,9 +32,9 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
         }
     }
 
-    public LinkedList<Integer> getListaLLamadas(int pos1, int pos2, int pos3, int pos4) {
+    public LinkedList<Integer> getListaLLamadas(LinkedList<Integer> sublista) {
 
-        setLlamadas(pos1, pos2, pos3, pos4);
+        setLlamadas(sublista.get(0), sublista.get(1), sublista.get(2), sublista.get(3));
         return this;
     }
 }

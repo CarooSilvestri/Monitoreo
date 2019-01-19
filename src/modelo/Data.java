@@ -3,6 +3,7 @@ package modelo;
 import modelo.ascensor.Ascensor;
 import modelo.excepciones.PaqueteCorrompidoError;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -20,44 +21,46 @@ public class Data {
 
     public void acomodarDatosEntrantes() {
 
-        for (LinkedList<Integer> datosAscensor : datosEntrantes) {
-            if (validaciones(datosAscensor))     System.out.println(datosAscensor);
-            else System.out.println("hola");
-        }
-/*
+        for (LinkedList<Integer> datosAscensor : this.datosEntrantes) {
+
+            int numero_asc = datosAscensor.getFirst();
+
             if (validaciones(datosAscensor)) {
-                if (datosAscensor[1] == 00) {
-                    // DPC
-                    if (datosAscensor[0] == 40) {
+                // DPC
+                if (numero_asc == 64) {
+                   // System.out.println("DPC");
+                    //this.despacho = new Despacho();
+                    //this.despacho.actualizar(datosAscensor);
 
-                        this.despacho = new Despacho();
-                        this.despacho.actualizar(datosAscensor);
                     // ASCENSORES
-                    }else if (this.ascensores.containsKey(datosAscensor[0])) {
+                }else if (this.ascensores.containsKey(numero_asc)) {
 
-                        this.ascensores.get(datosAscensor[0]).actualizar(datosAscensor);
-                    } else {
-
-                        this.ascensores.put(datosAscensor[0], new Ascensor());
-                        this.ascensores.get(datosAscensor[0]).actualizar(datosAscensor);
-                    }
+                    //  this.ascensores.get(numero_asc).actualizar(datosAscensor);
+                } else {
+                    //System.out.println("ASC");
+                    //  this.ascensores.put(numero_asc, new Ascensor());
+                    //this.ascensores.get(numero_asc).actualizar(datosAscensor);
                 }
             }
-        }*/
+        }
     }
+
+
 
     private boolean validaciones(LinkedList<Integer> asc) {
 
         boolean flag = false;
-
-        // VER TODAS LAS VALIDACIONES
         try {
-            if (asc.size() == 94) flag = true;
-            if (asc.getFirst() > 60) flag = true;
-            if (asc.getFirst() == 170) flag = true;
+            if (asc.size() == 93) flag = true;
+            if (asc.getFirst() == 64 || asc.getFirst() == 65 ||
+                    asc.getFirst() == 66 || asc.getFirst() == 67||
+                        asc.getFirst() == 68) flag = true;
+            if (asc.getLast() >= 0) flag = true;
+
         } catch (PaqueteCorrompidoError e) {
 
         }
+
         return flag;
     }
 

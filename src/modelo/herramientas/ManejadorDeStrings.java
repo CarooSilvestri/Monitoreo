@@ -2,19 +2,17 @@ package modelo.herramientas;
 
 public class ManejadorDeStrings {
 
-    public char[] invertirString(String string) {
+    public String leadingZeros (int numeroAstr) {
 
-        char[] resultado = string.toCharArray();
-        return resultado;
-
+        String strNumero = Integer.toString(numeroAstr);
+        if (strNumero.length() < 8) {
+           strNumero = String.format("%08d", numeroAstr);
+        }
+        return strNumero;
     }
 
     public String concatenarStr(String str1, String str2, String str3, String str4) {
 
-        String nuevaCadena = str1.concat(str2);
-        nuevaCadena.concat(str3);
-        nuevaCadena.concat(str4);
-
-        return nuevaCadena;
+        return  ((str1.concat(str2)).concat(str3)).concat(str4);
     }
 }

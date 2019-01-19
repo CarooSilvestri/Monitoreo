@@ -4,6 +4,8 @@ import modelo.ManejadorDeLlamadas;
 import modelo.ascensor.cabina.Cabina;
 import modelo.ascensor.cabina.estado_cabina.EstadoCabina;
 
+import java.util.LinkedList;
+
 public class Ascensor {
 
     private int posAct, paradas, paradaInf, paradaSup;
@@ -23,9 +25,9 @@ public class Ascensor {
         this.manejadorDeLlamadas = new ManejadorDeLlamadas();
     }
 
-    public void actualizar(int[] dataAsc){
+    public void actualizar(LinkedList<Integer> dataAsc){
 
-        this.posAct = dataAsc[1];
+    /*    this.posAct = dataAsc[1];
         this.paradas = dataAsc[2];
         this.paradaInf = dataAsc[3];
         this.paradaSup = dataAsc[4];
@@ -33,7 +35,7 @@ public class Ascensor {
         analizarDireccion(dataAsc[12]);
         analizarEstadoPuertas(dataAsc[14], dataAsc[15]);
         this.configuracionAscensor.setConfig(dataAsc[13]);
-        analizarLlamadas(dataAsc);
+        analizarLlamadas(dataAsc);*/
     }
 
     private void analizarEstadoSLC(int pos11) {
