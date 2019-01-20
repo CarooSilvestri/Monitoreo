@@ -1,6 +1,6 @@
 package modelo.ascensor;
 
-import modelo.ManejadorDeLlamadas;
+import modelo.herramientas.ManejadorDeLlamadas;
 import modelo.ascensor.cabina.Cabina;
 import modelo.ascensor.cabina.estado_cabina.EstadoCabina;
 

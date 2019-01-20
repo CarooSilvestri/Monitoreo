@@ -5,11 +5,9 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import jssc.SerialPortException;
 import modelo.Data;
 import modelo.herramientas.ManejadorDeStrings;
 //import vista.VistaPantalla;
-import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Array;
@@ -72,7 +70,7 @@ public class Monitoreo extends Application {
                         } else {
 
                             this.dataTotal.add(this.datos);
-                            System.out.println(datos);
+                            //System.out.println(datos);
                             this.datos = new LinkedList<Integer>();
                         }
                         if (this.dataTotal.size() == 5) {

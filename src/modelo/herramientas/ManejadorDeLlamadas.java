@@ -1,4 +1,4 @@
-package modelo;
+package modelo.herramientas;
 
 import modelo.herramientas.ManejadorDeStrings;
 
@@ -22,19 +22,19 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
         String str3 = this.manejadorDeStrings.leadingZeros(pos2);
         String str4 = this.manejadorDeStrings.leadingZeros(pos1);
 
-
         String llamadas = this.manejadorDeStrings.concatenarStr(str1, str2, str3, str4);
 
-        int j = 33;
-        for (int i = llamadas.length(); i > 0; i--) {
-            System.out.println(llamadas.length());
-            if (llamadas.charAt(i) == '0') super.add(Math.abs(i - j));
+        int j = 32;
+        for (int i = llamadas.length() - 1; i >= 0; i--) {
+
+            if (llamadas.charAt(i) != '1') super.add(Math.abs(i - j));
         }
     }
 
     public LinkedList<Integer> getListaLLamadas(LinkedList<Integer> sublista) {
 
         setLlamadas(sublista.get(0), sublista.get(1), sublista.get(2), sublista.get(3));
+        System.out.println(this);
         return this;
     }
 }
