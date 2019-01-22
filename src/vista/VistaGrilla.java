@@ -1,4 +1,3 @@
-/*
 package vista;
 
 import javafx.geometry.Pos;
@@ -103,4 +102,4 @@ public class VistaGrilla extends GridPane {
         setearColumnas(vistaAscensor);
     }
 }
-*/
+

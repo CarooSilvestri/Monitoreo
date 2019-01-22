@@ -1,4 +1,4 @@
-/*package vista;
+package vista;
 
 import controladores.controladores_ascensor.ControladorLlamadaCabina;
 import javafx.geometry.Insets;
@@ -39,4 +39,4 @@ public class VistaParadas extends VBox {
 
 
 
-}*/
+}

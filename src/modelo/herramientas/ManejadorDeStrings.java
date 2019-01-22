@@ -5,9 +5,11 @@ public class ManejadorDeStrings {
     public String leadingZeros (int numeroAstr) {
 
         String strNumero = Integer.toBinaryString(numeroAstr);
+
         if (strNumero.length() < 8) {
-           strNumero = String.format("%08d", numeroAstr);
+           strNumero = String.format("%08d", Integer.valueOf(strNumero));
         }
+
         return strNumero;
     }
 

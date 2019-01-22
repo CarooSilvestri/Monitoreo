@@ -1,24 +1,28 @@
 package modelo.ascensor;
 
+import modelo.herramientas.ManejadorDeStrings;
+
 public class ConfiguracionAscensor {
 
-    private char[] estado;
-
     private char ptt, puertaDesabilitada, ascensorista, servInd, incendio, epd, fme, manual, automatico;
+    private ManejadorDeStrings manejadorDeStrings;
+
+    public ConfiguracionAscensor() {
+
+        this.manejadorDeStrings = new ManejadorDeStrings();
+    }
 
     public void setConfig(int est) {
 
-        for (int i = 0; i <= Integer.toString(est).length(); i++) {
-            this.estado[i] = Integer.toString(est).charAt(i);
-        };
+        String configBinario = this.manejadorDeStrings.leadingZeros(est);
 
-        this.ptt = this.estado[0];
-        this.puertaDesabilitada = this.estado[1];
-        this.ascensorista = this.estado[2];
-        this.servInd = this.estado[3];
-        this.incendio = this.estado[4];
-        this.epd = this.estado[5];
-        this.fme = this.estado[6];
+        this.ptt = configBinario.charAt(0);
+        this.puertaDesabilitada = configBinario.charAt(1);
+        this.ascensorista = configBinario.charAt(2);
+        this.servInd = configBinario.charAt(3);
+        this.incendio = configBinario.charAt(4);
+        this.epd = configBinario.charAt(5);
+        this.fme = configBinario.charAt(6);
     }
 
     public void setManual(char manual) {

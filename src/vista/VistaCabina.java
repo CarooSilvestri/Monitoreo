@@ -1,4 +1,3 @@
-/*
 package vista;
 
 import controladores.controladores_ascensor.ControladorCabina;
@@ -19,7 +18,7 @@ public class VistaCabina extends VBox {
 
         this.pisos = cantPisos;
         this.ascensor = ascensor;
-        this.controladorCabina = new ControladorCabina(this, ascensor);
+      //  this.controladorCabina = new ControladorCabina(this, ascensor);
     }
 
     public void cabinas() {
@@ -50,4 +49,4 @@ public class VistaCabina extends VBox {
     }
 
 }
-*/
+

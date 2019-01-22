@@ -1,4 +1,3 @@
-/*
 package vista;
 
 import controladores.controladores_menu.ControladorAlarmaIncendio;
@@ -56,4 +55,4 @@ public class VistaMenu extends HBox {
         this.barraMenu();
     }
 }
-*/
+

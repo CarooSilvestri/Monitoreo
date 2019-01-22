@@ -16,7 +16,6 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
 
     private void setLlamadas(int pos1, int pos2, int pos3, int pos4) {
 
-
         String str1 = this.manejadorDeStrings.leadingZeros(pos4);
         String str2 = this.manejadorDeStrings.leadingZeros(pos3);
         String str3 = this.manejadorDeStrings.leadingZeros(pos2);
@@ -34,7 +33,6 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
     public LinkedList<Integer> getListaLLamadas(LinkedList<Integer> sublista) {
 
         setLlamadas(sublista.get(0), sublista.get(1), sublista.get(2), sublista.get(3));
-        System.out.println(this);
         return this;
     }
 }

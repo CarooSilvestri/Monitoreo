@@ -1,4 +1,3 @@
-/*
 package vista;
 
 import controladores.controladores_ascensor.ControladorAscensor;
@@ -28,7 +27,7 @@ public class VistaAscensor extends GridPane {
         this.asigLB2 = new VistaAsignadas(pisos);
         this.vistaCabina = new VistaCabina(pisos, ascensor);
         this.pisos = pisos;
-        this.controladorAscensor = new ControladorAscensor(ascensor, this);
+       // this.controladorAscensor = new ControladorAscensor(ascensor, this);
     }
 
     private void formatoAscensor() {
@@ -70,4 +69,4 @@ public class VistaAscensor extends GridPane {
         numerarPisos();
     }
 }
-*/
+

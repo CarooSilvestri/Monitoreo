@@ -28,10 +28,11 @@ public class Cabina {
         if (estacionando == 1) this.estadoCabina = new CabinaEstacionando();
     }
 
-    public void acomodarPuertas(char[] puertasSFR, char[] puertasAC) {
+    public void acomodarPuertas(String puertasSFR, String puertasAC) {
 
         // SEG ABIERTAS o SEG CERRADAS
-        if (puertasSFR[7] == 1) {
+
+        if (puertasSFR.charAt(7) == 1) {
             this.puerta1.abrirPuerta();
             this.puerta2.abrirPuerta();
         } else {
@@ -40,22 +41,22 @@ public class Cabina {
         }
 
         // FALLAS
-        if (puertasSFR[3] == 1) this.fallas.agregarFalla(puertasSFR[3]);
-        if (puertasSFR[4] == 1) this.fallas.agregarFalla(puertasSFR[4]);
+      /*  if (puertasSFR.charAt(3)[3] == 1) this.fallas.agregarFalla(puertasSFR.charAt(3)[3]);
+        if (puertasSFR.charAt(4)[4] == 1) this.fallas.agregarFalla(puertasSFR.charAt(4)[4]);*/
 
         // REOPEN
-        if (puertasSFR[1] == 1) this.puerta2.puertaConBarrera();
-        if (puertasSFR[0] == 1) this.puerta1.puertaConBarrera();
+        if (puertasSFR.charAt(1) == 1) this.puerta2.puertaConBarrera();
+        if (puertasSFR.charAt(0) == 1) this.puerta1.puertaConBarrera();
 
         // ABRIENDO O CERRANDO
 
         // LADO 1
-        if (puertasAC[1] == 1) this.puerta1.cerrarPuerta();
-        if (puertasAC[0] == 1) this.puerta1.abrirPuerta();
+        if (puertasAC.charAt(1) == 1) this.puerta1.cerrarPuerta();
+        if (puertasAC.charAt(0) == 1) this.puerta1.abrirPuerta();
 
         // LADO 2
-        if (puertasAC[3] == 1) this.puerta2.cerrarPuerta();
-        if (puertasAC[2] == 1) this.puerta2.abrirPuerta();
+        if (puertasAC.charAt(3) == 1) this.puerta2.cerrarPuerta();
+        if (puertasAC.charAt(2) == 1) this.puerta2.abrirPuerta();
 
     }
 

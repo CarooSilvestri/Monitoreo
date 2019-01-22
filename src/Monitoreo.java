@@ -1,4 +1,3 @@
-import controladores.ControladorMonitoreo;
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
 import javafx.application.Application;
@@ -6,31 +5,27 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import modelo.Data;
-import modelo.herramientas.ManejadorDeStrings;
-//import vista.VistaPantalla;
-import java.io.IOException;
+import vista.VistaPantalla;
+
 import java.io.InputStream;
-import java.lang.reflect.Array;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
 import java.util.LinkedList;
 
 
 public class Monitoreo extends Application {
 
-    Data datos;
-
-    CommPortIdentifier portId;
-    Enumeration puertos;
-    SerialPort serialport;
-    static InputStream entrada = null;
-    Thread t;
+    private CommPortIdentifier portId;
+    private Enumeration puertos;
+    private SerialPort serialport;
+    private static InputStream entrada = null;
+    private Thread t;
+    private LeerDatos leerDatos = new LeerDatos();
 
     public Monitoreo(){
+
         super();
         puertos = CommPortIdentifier.getPortIdentifiers();
-        t = new Thread(new LeerDatos());
+        t = new Thread(leerDatos);
         while (puertos.hasMoreElements()) {
             portId = (CommPortIdentifier) puertos.nextElement();
         }
@@ -52,6 +47,7 @@ public class Monitoreo extends Application {
 
         LinkedList<LinkedList<Integer>> dataTotal = new LinkedList<LinkedList<Integer>>();
         LinkedList<Integer> datos = new LinkedList<Integer>();
+        private Data data = new Data();
         int aux;
 
         public void run(){
@@ -70,13 +66,12 @@ public class Monitoreo extends Application {
                         } else {
 
                             this.dataTotal.add(this.datos);
-                            //System.out.println(datos);
+                           //System.out.println(Integer.toBinaryString(datos.get(11)));
                             this.datos = new LinkedList<Integer>();
                         }
                         if (this.dataTotal.size() == 5) {
-
-                            Data data = new Data(this.dataTotal);
-                            data.acomodarDatosEntrantes();
+System.out.println(dataTotal);
+                            this.data.acomodarDatosEntrantes(dataTotal);
                             this.dataTotal = new LinkedList<LinkedList<Integer>>();
                         }
                     }
@@ -87,16 +82,14 @@ public class Monitoreo extends Application {
         }
     }
 
-
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+        new Monitoreo();
         BorderPane root = new BorderPane();
 
-        // this.datos = new Data(dataTotal);
-
-        //  VistaPantalla vistaPantalla = new VistaPantalla(root, 10, this.datos.getAscensores());
-        //  vistaPantalla.dibujar();
+        VistaPantalla vistaPantalla = new VistaPantalla(root);
+        vistaPantalla.dibujar();
 
         Scene scene = new Scene(root,800, 480);
         primaryStage.setTitle("Monitoreo SILCON");
@@ -107,8 +100,7 @@ public class Monitoreo extends Application {
 
     public static void main(String[] args) {
 
-        new Monitoreo();
-        // launch(args);
+        launch(args);
     }
 }
 

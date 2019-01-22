@@ -14,10 +14,10 @@ public class ManejadorDeLlamadasTest {
         ManejadorDeLlamadas manejadorDeLlamadas = new ManejadorDeLlamadas();
         LinkedList<Integer> numeros = new LinkedList<Integer>();
 
-        int i1 = 11111111;
-        int i2 = 11111111;
-        int i3 = 11111111;
-        int i4 = 11111111;
+        int i1 = 255;
+        int i2 = 255;
+        int i3 = 255;
+        int i4 = 255;
 
         numeros.add(i1);
         numeros.add(i2);
@@ -54,10 +54,10 @@ public class ManejadorDeLlamadasTest {
         ManejadorDeLlamadas manejadorDeLlamadas = new ManejadorDeLlamadas();
         LinkedList<Integer> numeros = new LinkedList<Integer>();
 
-        int i1 = 11111110;
-        int i2 = 11111110;
-        int i3 = 11111110;
-        int i4 = 11111110;
+        int i1 = 254;
+        int i2 = 254;
+        int i3 = 254;
+        int i4 = 254;
 
         numeros.add(i1);
         numeros.add(i2);
@@ -78,10 +78,10 @@ public class ManejadorDeLlamadasTest {
         ManejadorDeLlamadas manejadorDeLlamadas = new ManejadorDeLlamadas();
         LinkedList<Integer> numeros = new LinkedList<Integer>();
 
-        int i1 = 1111111;
-        int i2 = 1111111;
-        int i3 = 1111111;
-        int i4 = 1111111;
+        int i1 = 127;
+        int i2 = 127;
+        int i3 = 127;
+        int i4 = 127;
 
         numeros.add(i1);
         numeros.add(i2);
@@ -97,15 +97,15 @@ public class ManejadorDeLlamadasTest {
     }
 
     @Test
-    public void t04LlamadaPiso5Y11Y15Y27T28Activas() {
+    public void t04LlamadaPiso5Y11Y15Activas() {
 
         ManejadorDeLlamadas manejadorDeLlamadas = new ManejadorDeLlamadas();
         LinkedList<Integer> numeros = new LinkedList<Integer>();
 
-        int i1 = 11101111;
-        int i2 = 10111011;
-        int i3 = 11111111;
-        int i4 = 11110011;
+        int i1 = 239;
+        int i2 = 187;
+        int i3 = 255;
+        int i4 = 255;
 
         numeros.add(i1);
         numeros.add(i2);
@@ -117,8 +117,6 @@ public class ManejadorDeLlamadasTest {
         assertTrue(llamadas.get(0) == 5);
         assertTrue(llamadas.get(1) == 11);
         assertTrue(llamadas.get(2) == 15);
-        assertTrue(llamadas.get(3) == 27);
-        assertTrue(llamadas.get(4) == 28);
     }
 
 

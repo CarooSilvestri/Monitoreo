@@ -1,4 +1,4 @@
-/*package vista;
+package vista;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -33,4 +33,4 @@ public class VistaAsignadas extends VBox {
     }
 
 
-}*/
+}
