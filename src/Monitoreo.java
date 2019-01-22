@@ -19,13 +19,12 @@ public class Monitoreo extends Application {
     private SerialPort serialport;
     private static InputStream entrada = null;
     private Thread t;
-    private LeerDatos leerDatos = new LeerDatos();
-
+    private Data data = new Data();
     public Monitoreo(){
 
         super();
         puertos = CommPortIdentifier.getPortIdentifiers();
-        t = new Thread(leerDatos);
+        t = new Thread(new LeerDatos(data));
         while (puertos.hasMoreElements()) {
             portId = (CommPortIdentifier) puertos.nextElement();
         }
@@ -47,8 +46,12 @@ public class Monitoreo extends Application {
 
         LinkedList<LinkedList<Integer>> dataTotal = new LinkedList<LinkedList<Integer>>();
         LinkedList<Integer> datos = new LinkedList<Integer>();
-        private Data data = new Data();
+      Data data;
         int aux;
+
+        public LeerDatos(Data d) {
+            this.data = d;
+        }
 
         public void run(){
 
@@ -70,7 +73,7 @@ public class Monitoreo extends Application {
                             this.datos = new LinkedList<Integer>();
                         }
                         if (this.dataTotal.size() == 5) {
-System.out.println(dataTotal);
+
                             this.data.acomodarDatosEntrantes(dataTotal);
                             this.dataTotal = new LinkedList<LinkedList<Integer>>();
                         }
@@ -88,7 +91,7 @@ System.out.println(dataTotal);
         new Monitoreo();
         BorderPane root = new BorderPane();
 
-        VistaPantalla vistaPantalla = new VistaPantalla(root);
+        VistaPantalla vistaPantalla = new VistaPantalla(root, data);
         vistaPantalla.dibujar();
 
         Scene scene = new Scene(root,800, 480);

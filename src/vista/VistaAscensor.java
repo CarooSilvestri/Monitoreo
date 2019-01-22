@@ -17,7 +17,7 @@ public class VistaAscensor extends GridPane {
     private int pisos;
     private ControladorAscensor controladorAscensor;
 
-    public VistaAscensor(int pisos, Ascensor ascensor) {
+    public VistaAscensor(Ascensor ascensor) {
 
         this.vistaParadasLado1 = new VistaParadas(pisos);
         this.vistaParadasLado2 = new VistaParadas(pisos);
@@ -26,8 +26,7 @@ public class VistaAscensor extends GridPane {
         this.asigLS2 = new VistaAsignadas(pisos);
         this.asigLB2 = new VistaAsignadas(pisos);
         this.vistaCabina = new VistaCabina(pisos, ascensor);
-        this.pisos = pisos;
-       // this.controladorAscensor = new ControladorAscensor(ascensor, this);
+        this.controladorAscensor = new ControladorAscensor(ascensor, this);
     }
 
     private void formatoAscensor() {

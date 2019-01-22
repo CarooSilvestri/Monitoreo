@@ -26,7 +26,7 @@ public class VistaCabina extends VBox {
         for (Integer i = this.pisos; i > 0; i--) {
             Label label = new Label();
             label.setGraphic(new ImageView("Ascensor vacio.jpg"));
-            if (this.ascensor.getPisoActual() == i) {
+            if (this.ascensor.getPosAct() == i) {
                 label.setGraphic(new ImageView());
             }
             super.getChildren().add(label);

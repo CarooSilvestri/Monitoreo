@@ -15,9 +15,8 @@ public class VistaMenu extends HBox {
     private int[] pisos;
     private LinkedList<VistaAscensor> ascensor;
 
-    public VistaMenu(int[] pisos, LinkedList<VistaAscensor> ascensor) {
+    public VistaMenu(LinkedList<VistaAscensor> ascensor) {
 
-        this.pisos = pisos;
         this.ascensor = ascensor;
     }
 

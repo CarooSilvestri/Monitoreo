@@ -97,8 +97,13 @@ public class Ascensor {
         // FALLAS CABINA
     }
 
-    public int getPisoActual() {
+    public int getParadas() {
 
-        return this.posAct;
+        return this.paradas;
+    }
+
+    public int getPosAct() {
+
+        return posAct;
     }
 }
