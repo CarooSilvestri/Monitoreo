@@ -46,7 +46,7 @@ public class Monitoreo extends Application {
 
         LinkedList<LinkedList<Integer>> dataTotal = new LinkedList<LinkedList<Integer>>();
         LinkedList<Integer> datos = new LinkedList<Integer>();
-      Data data;
+        Data data;
         int aux;
 
         public LeerDatos(Data d) {

@@ -57,11 +57,6 @@ public class VistaAscensor extends GridPane {
         super.add(this.vistaParadasLado2, 6, 0);
     }
 
-    public int getPisos() {
-
-        return this.pisos;
-    }
-
     public void dibujarAscensor() {
 
         formatoAscensor();

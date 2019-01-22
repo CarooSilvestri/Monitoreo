@@ -11,9 +11,9 @@ public class VistaLlamadasExteriores extends HBox {
 
     private int pisos;
 
-    public VistaLlamadasExteriores(int pisos) {
+    public VistaLlamadasExteriores() {
 
-       this.pisos = pisos;
+       this.pisos = 0;
     }
 
     private void formato() {

@@ -13,10 +13,10 @@ public class VistaGrilla extends GridPane {
     private VistaLlamadasExteriores vistaLlamadasExterioresSubir;
     private VistaLlamadasExteriores vistaLlamadasExterioresBajar;
 
-    public VistaGrilla(int pisos, LinkedList<Ascensor> ascensores) {
+    public VistaGrilla() {
 
-        this.vistaLlamadasExterioresSubir = new VistaLlamadasExteriores(pisos);
-        this.vistaLlamadasExterioresBajar = new VistaLlamadasExteriores(pisos);
+        this.vistaLlamadasExterioresSubir = new VistaLlamadasExteriores();
+        this.vistaLlamadasExterioresBajar = new VistaLlamadasExteriores();
         this.vistaConfiguracion = new VistaConfiguracion();
     }
 

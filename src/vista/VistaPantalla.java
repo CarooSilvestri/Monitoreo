@@ -23,14 +23,15 @@ public class VistaPantalla {
 
         this.controladorData = new ControladorData(data);
         this.borderPrincipal = principal;
+        this.grilla = new VistaGrilla();
         this.vistaAscensor = new LinkedList<>();
         this.ascensores = this.controladorData.getAscensores();
     }
 
     private void setearAscensores(){
-        
+
         for (int i = 0; i <= this.ascensores.size(); i++) {
-            System.out.println("jhdoslf");
+
             vistaAscensor.add(new VistaAscensor(this.ascensores.get(i)));
         }
         this.vistaMenu = new VistaMenu(this.vistaAscensor);
@@ -40,8 +41,8 @@ public class VistaPantalla {
 
         setearAscensores();
 
-//        this.vistaMenu.dibujarMenu();
-//        this.grilla.dibujarGrilla(this.vistaAscensor);
+        this.vistaMenu.dibujarMenu();
+        this.grilla.dibujarGrilla(this.vistaAscensor);
         this.borderPrincipal.setCenter(this.grilla);
         this.borderPrincipal.setTop(this.vistaMenu);
 
