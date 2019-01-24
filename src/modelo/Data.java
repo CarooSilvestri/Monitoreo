@@ -19,6 +19,7 @@ public class Data {
     }
 
     public void acomodarDatosEntrantes(LinkedList<LinkedList<Integer>> datosEntrantes) {
+
         for (LinkedList<Integer> datosAscensor : datosEntrantes) {
 
             int numero_asc = datosAscensor.getFirst();

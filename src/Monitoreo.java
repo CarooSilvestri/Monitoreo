@@ -1,9 +1,12 @@
+import controladores.controladores_menu.ControladorSalir;
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import modelo.Data;
 import vista.VistaPantalla;
 
@@ -20,6 +23,7 @@ public class Monitoreo extends Application {
     private static InputStream entrada = null;
     private Thread t;
     private Data data = new Data();
+
     public Monitoreo(){
 
         super();
@@ -28,7 +32,7 @@ public class Monitoreo extends Application {
         while (puertos.hasMoreElements()) {
             portId = (CommPortIdentifier) puertos.nextElement();
         }
-        if (portId.getName().equalsIgnoreCase("COM4")) {
+        if (portId.getName().equalsIgnoreCase("COM3")) {
             try {
                 serialport = (SerialPort) portId.open("LecturaSerial", 0);
                 serialport.setSerialPortParams(38400, SerialPort.DATABITS_8, SerialPort.STOPBITS_2, SerialPort.PARITY_NONE);
@@ -50,6 +54,7 @@ public class Monitoreo extends Application {
         int aux;
 
         public LeerDatos(Data d) {
+
             this.data = d;
         }
 
@@ -69,7 +74,6 @@ public class Monitoreo extends Application {
                         } else {
 
                             this.dataTotal.add(this.datos);
-                           //System.out.println(Integer.toBinaryString(datos.get(11)));
                             this.datos = new LinkedList<Integer>();
                         }
                         if (this.dataTotal.size() == 5) {
@@ -88,13 +92,20 @@ public class Monitoreo extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        new Monitoreo();
+
+
         BorderPane root = new BorderPane();
 
         VistaPantalla vistaPantalla = new VistaPantalla(root, data);
         vistaPantalla.dibujar();
 
         Scene scene = new Scene(root,800, 480);
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+
+            public void handle(WindowEvent we) {
+                System.exit(0);
+            }
+        });
         primaryStage.setTitle("Monitoreo SILCON");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -103,6 +114,7 @@ public class Monitoreo extends Application {
 
     public static void main(String[] args) {
 
+        new Monitoreo();
         launch(args);
     }
 }

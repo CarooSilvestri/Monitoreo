@@ -93,13 +93,30 @@ public class VistaGrilla extends GridPane {
         super.setHgap(5);
     }
 
+    private void labelNoHayAscConectados() {
+
+        Label label = new Label("No hay ascensores conectados.");
+        super.add(label, 2,3);
+    }
+
     public void dibujarGrilla(LinkedList<VistaAscensor> vistaAscensores) {
 
         LinkedList<VistaAscensor> vistaAscensor = vistaAscensores;
-
         propGrilla();
-        setearLabels(vistaAscensor);
-        setearColumnas(vistaAscensor);
+
+        if (!vistaAscensor.isEmpty()) {
+
+            setearLabels(vistaAscensor);
+            setearColumnas(vistaAscensor);
+
+        }else {
+
+            labelNoHayAscConectados();
+        }
+    }
+
+    public void update() {
+
     }
 }
 

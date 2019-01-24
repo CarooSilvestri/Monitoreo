@@ -1,7 +1,7 @@
 package vista;
 
-import controladores.ControladorDPC;
 import controladores.ControladorData;
+import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import modelo.Data;
 import modelo.ascensor.Ascensor;
@@ -30,9 +30,11 @@ public class VistaPantalla {
 
     private void setearAscensores(){
 
-        for (int i = 0; i <= this.ascensores.size(); i++) {
+        if (!this.ascensores.isEmpty()){
+             for (int i = 1; i <= this.ascensores.size(); i++) {
 
-            vistaAscensor.add(new VistaAscensor(this.ascensores.get(i)));
+                vistaAscensor.add(new VistaAscensor(this.ascensores.get(i)));
+            }
         }
         this.vistaMenu = new VistaMenu(this.vistaAscensor);
     }
@@ -45,7 +47,11 @@ public class VistaPantalla {
         this.grilla.dibujarGrilla(this.vistaAscensor);
         this.borderPrincipal.setCenter(this.grilla);
         this.borderPrincipal.setTop(this.vistaMenu);
+    }
 
+    public void update() {
+
+        this.grilla.update();
     }
 }
 
