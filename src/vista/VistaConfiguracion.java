@@ -15,7 +15,7 @@ public class VistaConfiguracion extends Accordion {
 
     public void llenar(int cant){
 
-        for (int i = 1; i < cant; i++) {
+        for (int i = 1; i <= cant; i++) {
 
             TitledPane tn = new TitledPane("Ascensor " + Integer.toString(i), opciones());
             tn.setStyle("-fx-font-size: 9px;");
@@ -48,9 +48,9 @@ public class VistaConfiguracion extends Accordion {
         separator.setOrientation(Orientation.HORIZONTAL);
 
         ScrollPane estadisticas = new ScrollPane();
-          estadisticas.setPrefSize(150,100);
-       estadisticas.setFitToWidth(true);
-       estadisticas.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        estadisticas.setPrefSize(150,100);
+        estadisticas.setFitToWidth(true);
+        estadisticas.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 
         Text logStats = new Text("hola");
         logStats.setWrappingWidth(200);
@@ -60,9 +60,10 @@ public class VistaConfiguracion extends Accordion {
         Separator s = new Separator();
         s.setOrientation(Orientation.HORIZONTAL);
 
-        VBox cajaConfig = new VBox(new Label("Configuración del ascensor:\n\nDesc 18P 2V AAAAA LDPC"),s,cbServInd, cbAscensorista, cbPpt, cbPuertaDis, cbAlarmaInc, cbFueraServ, separator, estadisticas);
+        VBox cajaConfig = new VBox(new Label("Configuración del ascensor:\n\nDesc 18P 2V AAAAA LDPC"),
+                s, cbServInd, cbAscensorista, cbPpt, cbPuertaDis, cbAlarmaInc, cbFueraServ, separator, estadisticas);
         cajaConfig.setAlignment(Pos.CENTER_LEFT);
-       cajaConfig.setSpacing(5);
+        cajaConfig.setSpacing(5);
 
         cajaConfig.setStyle("-fx-font-size: 10px;");
         return cajaConfig;

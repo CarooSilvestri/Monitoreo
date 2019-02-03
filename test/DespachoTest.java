@@ -16,8 +16,8 @@ public class DespachoTest {
 
   /*      for (int i = 1; i <= PISOS_TOTALES; i++) {
 
-            Integer d =00000000;
-            pisos[i] = d;
+            Integer paqueteDeDatosParcial =00000000;
+            pisos[i] = paqueteDeDatosParcial;
             System.out.println(pisos[i]);
         }   
 */

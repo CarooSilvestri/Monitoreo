@@ -1,36 +1,41 @@
-package modelo;
+package modelo.datos;
 
+import controladores.ControladorMonitoreo;
+import modelo.Despacho;
 import modelo.ascensor.Ascensor;
-import modelo.excepciones.PaqueteCorrompidoError;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 
 public class Data {
 
     private HashMap<Integer, Ascensor> ascensores;
     private Despacho despacho;
+    private PaqueteDeDatosCompleto paqueteDeDatosCompleto;
+    private ControladorMonitoreo controladorMonitoreo;
 
     public Data() {
 
         this.ascensores = new HashMap<Integer, Ascensor>();
         this.despacho = new Despacho();
+        this.controladorMonitoreo = ControladorMonitoreo.getInstancia();
+
     }
 
-    public void acomodarDatosEntrantes(LinkedList<LinkedList<Integer>> datosEntrantes) {
-
-        for (LinkedList<Integer> datosAscensor : datosEntrantes) {
+    public void acomodarDatosEntrantes(PaqueteDeDatosCompleto paqueteDatos) {
+        controladorMonitoreo.setData(this);
+        for (PaqueteDeDatosParcial datosAscensor : paqueteDatos) {
 
             int numero_asc = datosAscensor.getFirst();
-            if (validaciones(datosAscensor)) {
+
+            if (datosAscensor.verificarPaquete()) {
+
                 // DPC
                 if (numero_asc == 64) {
 
                     this.despacho.actualizar(datosAscensor);
 
-                    // ASCENSORES
-                }else if (datosAscensor.get(1) != 255 && datosAscensor.get(1) != 0) {
+                // ASCENSORES
+                } else if (datosAscensor.verificarConexionAsc()) {
 
                     if (this.ascensores.containsKey(numero_asc)) {
 
@@ -43,23 +48,6 @@ public class Data {
                 }
             }
         }
-    }
-
-    private boolean validaciones(LinkedList<Integer> asc) {
-
-        boolean flag = false;
-        try {
-            if (asc.size() == 93) flag = true;
-            if (asc.getFirst() == 64 || asc.getFirst() == 65 ||
-                    asc.getFirst() == 66 || asc.getFirst() == 67||
-                        asc.getFirst() == 68) flag = true;
-            if (asc.getLast() >= 0) flag = true;
-
-        } catch (PaqueteCorrompidoError e) {
-
-        }
-
-        return flag;
     }
 
     public HashMap<Integer, Ascensor> getAscensores() {

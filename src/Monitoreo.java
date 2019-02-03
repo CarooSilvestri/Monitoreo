@@ -1,4 +1,4 @@
-import controladores.controladores_menu.ControladorSalir;
+import controladores.ControladorMonitoreo;
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
 import javafx.application.Application;
@@ -7,12 +7,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import modelo.Data;
+import modelo.datos.Data;
+import modelo.datos.PaqueteDeDatosParcial;
+import modelo.datos.PaqueteDeDatosCompleto;
 import vista.VistaPantalla;
 
 import java.io.InputStream;
 import java.util.Enumeration;
-import java.util.LinkedList;
 
 
 public class Monitoreo extends Application {
@@ -22,11 +23,14 @@ public class Monitoreo extends Application {
     private SerialPort serialport;
     private static InputStream entrada = null;
     private Thread t;
-    private Data data = new Data();
+
+    private ControladorMonitoreo controladorMonitoreo = ControladorMonitoreo.getInstancia();
 
     public Monitoreo(){
 
         super();
+        Data data = new Data();
+      //  controladorMonitoreo.setData(data);
         puertos = CommPortIdentifier.getPortIdentifiers();
         t = new Thread(new LeerDatos(data));
         while (puertos.hasMoreElements()) {
@@ -48,14 +52,15 @@ public class Monitoreo extends Application {
 
     public static class LeerDatos implements Runnable {
 
-        LinkedList<LinkedList<Integer>> dataTotal = new LinkedList<LinkedList<Integer>>();
-        LinkedList<Integer> datos = new LinkedList<Integer>();
+        PaqueteDeDatosParcial paqueteDeDatosParcial = new PaqueteDeDatosParcial();
+        PaqueteDeDatosCompleto paqueteDatos = new PaqueteDeDatosCompleto();
         Data data;
+        ControladorMonitoreo controladorMonitoreo = ControladorMonitoreo.getInstancia();
         int aux;
 
-        public LeerDatos(Data d) {
+        public LeerDatos(Data data) {
 
-            this.data = d;
+            this.data = data;
         }
 
         public void run(){
@@ -69,17 +74,19 @@ public class Monitoreo extends Application {
                     if (this.aux >= 0) {
                         if (this.aux != 170) {
 
-                            this.datos.add(this.aux);
+                           this.paqueteDeDatosParcial.añadirDato(this.aux);
 
                         } else {
 
-                            this.dataTotal.add(this.datos);
-                            this.datos = new LinkedList<Integer>();
+                            this.paqueteDatos.añadirDatos(paqueteDeDatosParcial);
+                            this.paqueteDeDatosParcial = new PaqueteDeDatosParcial();
                         }
-                        if (this.dataTotal.size() == 5) {
 
-                            this.data.acomodarDatosEntrantes(dataTotal);
-                            this.dataTotal = new LinkedList<LinkedList<Integer>>();
+                        if (this.paqueteDatos.estaCompleto()) {
+
+                            this.data.acomodarDatosEntrantes(this.paqueteDatos);
+                            controladorMonitoreo.actualizar();
+                            this.paqueteDatos = new PaqueteDeDatosCompleto();
                         }
                     }
                 } catch (Exception e) {
@@ -90,31 +97,30 @@ public class Monitoreo extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
+        VistaPantalla vistaPantalla = new VistaPantalla();
+        controladorMonitoreo.setVistaPantalla(vistaPantalla);
 
-
-        BorderPane root = new BorderPane();
-
-        VistaPantalla vistaPantalla = new VistaPantalla(root, data);
-        vistaPantalla.dibujar();
-
-        Scene scene = new Scene(root,800, 480);
+        Scene scene = new Scene(vistaPantalla, 800, 480);
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 
             public void handle(WindowEvent we) {
                 System.exit(0);
             }
         });
+
         primaryStage.setTitle("Monitoreo SILCON");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
+
+        new Monitoreo();
+        vistaPantalla.dibujar();
     }
 
     public static void main(String[] args) {
 
-        new Monitoreo();
         launch(args);
     }
 }

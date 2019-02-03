@@ -5,10 +5,13 @@ import modelo.Despacho;
 public class ControladorDPC {
 
     private Despacho dpc;
+    private ControladorMonitoreo controladorMonitoreo;
 
-    public ControladorDPC() {
+    public ControladorDPC(Despacho dpc) {
 
-        this.dpc = new Despacho();
+        this.dpc = dpc;
+        this.controladorMonitoreo = ControladorMonitoreo.getInstancia();
     }
+
 
 }

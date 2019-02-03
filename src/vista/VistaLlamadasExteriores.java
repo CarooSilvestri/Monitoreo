@@ -9,13 +9,6 @@ import javafx.scene.layout.VBox;
 
 public class VistaLlamadasExteriores extends HBox {
 
-    private int pisos;
-
-    public VistaLlamadasExteriores() {
-
-       this.pisos = 0;
-    }
-
     private void formato() {
        super.setStyle("-fx-background-color: red;" +
                 "-fx-font-size: 9px;" +
@@ -23,11 +16,11 @@ public class VistaLlamadasExteriores extends HBox {
                 "-fx-inner-border: 0.25px");
     }
 
-    public VBox numerarPisosLlamadasExteriores() {
+    public VBox numerarPisosLlamadasExteriores(int pisos) {
 
         VBox v = new VBox();
 
-        for (int i = this.pisos; i > 0; i--) {
+        for (int i = pisos; i > 0; i--) {
             Label label = new Label();
             label.setGraphic(new ImageView("Llamada exterior vacia.jpg"));
             label.setMinWidth(14);
@@ -42,8 +35,8 @@ public class VistaLlamadasExteriores extends HBox {
         return v;
     }
 
-    public void dibujarLlamadas() {
+    public void dibujarLlamadas(int pisos) {
 
-        super.getChildren().addAll(numerarPisosLlamadasExteriores(), numerarPisosLlamadasExteriores());
+        super.getChildren().addAll(numerarPisosLlamadasExteriores(pisos), numerarPisosLlamadasExteriores(pisos));
     }
 }

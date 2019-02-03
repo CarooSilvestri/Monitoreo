@@ -7,7 +7,6 @@ public class ControladorLlamadaCabina implements EventHandler<MouseEvent> {
 
     private int piso;
     private int pisoAnterior;
-   // private LlamadaCabina llamadaCabina;
 
     public ControladorLlamadaCabina(int piso) {
 

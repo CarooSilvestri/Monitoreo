@@ -5,8 +5,8 @@ import vista.VistaAscensor;
 
 public class ControladorAscensor {
 
-    Ascensor ascensor;
-    VistaAscensor vistaAscensor;
+    private Ascensor ascensor;
+    private VistaAscensor vistaAscensor;
 
     public ControladorAscensor(Ascensor ascensor, VistaAscensor vistaAscensor) {
 
@@ -14,8 +14,10 @@ public class ControladorAscensor {
         this.vistaAscensor = vistaAscensor;
     }
 
+    public int getPisos() {
 
-
+        return this.ascensor.getParadas();
+    }
 
 
 }

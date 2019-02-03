@@ -1,5 +1,6 @@
 package modelo.ascensor;
 
+import modelo.datos.PaqueteDeDatosParcial;
 import modelo.herramientas.ManejadorDeLlamadas;
 import modelo.ascensor.cabina.Cabina;
 import modelo.ascensor.cabina.estado_cabina.EstadoCabina;
@@ -28,17 +29,18 @@ public class Ascensor {
         this.manejadorDeStrings = new ManejadorDeStrings();
     }
 
-    public void actualizar(LinkedList<Integer> dataAsc){
+    public void actualizar(PaqueteDeDatosParcial dataAsc){
 
-        this.posAct = dataAsc.get(1);
-        this.paradas = dataAsc.get(2);
-        this.paradaInf = dataAsc.get(3);
-        this.paradaSup = dataAsc.get(4);
-        analizarEstadoSLC(dataAsc.get(11));
+        this.posAct = dataAsc.getElemento(1);
+        this.paradas = dataAsc.getElemento(2);
+        this.paradaInf = dataAsc.getElemento(3);
+        this.paradaSup = dataAsc.getElemento(4);
+        analizarEstadoSLC(dataAsc.getElemento(11));
         //analizarDireccion(dataAsc.get(12));
-        analizarEstadoPuertas(dataAsc.get(14), dataAsc.get(15));
-        this.configuracionAscensor.setConfig(dataAsc.get(13));
-        analizarLlamadas(dataAsc);
+        analizarEstadoPuertas(dataAsc.getElemento(14), dataAsc.getElemento(15));
+        this.configuracionAscensor.setConfig(dataAsc.getElemento(13), dataAsc.getElemento(19));
+
+        //analizarLlamadas(dataAsc);
     }
 
     private void analizarEstadoSLC(int pos11) {

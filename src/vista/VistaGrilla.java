@@ -1,31 +1,37 @@
 package vista;
 
+import controladores.ControladorMonitoreo;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import modelo.ascensor.Ascensor;
 
-import java.util.LinkedList;
+import java.util.HashMap;
 
 public class VistaGrilla extends GridPane {
 
     private VistaConfiguracion vistaConfiguracion;
     private VistaLlamadasExteriores vistaLlamadasExterioresSubir;
     private VistaLlamadasExteriores vistaLlamadasExterioresBajar;
+    private HashMap<Integer, VistaAscensor> vistaAscensores;
+    private ControladorMonitoreo controladorMonitoreo;
 
     public VistaGrilla() {
 
         this.vistaLlamadasExterioresSubir = new VistaLlamadasExteriores();
         this.vistaLlamadasExterioresBajar = new VistaLlamadasExteriores();
         this.vistaConfiguracion = new VistaConfiguracion();
+        this.controladorMonitoreo = ControladorMonitoreo.getInstancia();
     }
 
-    private void setearColumnas(LinkedList<VistaAscensor> vistaAscensor) {
+    private void setearColumnas() {
 
+        System.out.println(this.vistaAscensores);
+        int numero_asc = 66;
         int i = 1;
-        for (VistaAscensor vista : vistaAscensor) {
+        for (Integer numeroAsc: this.vistaAscensores.keySet()) {
 
-            vista.dibujarAscensor();
+            this.vistaAscensores.get(numeroAsc).dibujarAscensor();
             Label LAscensor = new Label("Ascensor " + Integer.toString(i));
             LAscensor.setStyle("-fx-font-size: 10px;" +
                     "-fx-font-weight: bold;");
@@ -39,43 +45,44 @@ public class VistaGrilla extends GridPane {
             lEvento.setAlignment(Pos.CENTER);
             lEvento.setMinWidth(128);
 
-            super.add(lEvento, i, 2);
-            super.add(LAscensor, i, 0);
-            super.add(vista, i, 1);
+            this.add(lEvento, i, 2);
+            this.add(LAscensor, i, 0);
+            this.add(this.vistaAscensores.get(numeroAsc), i, 1);
             i++;
+            numero_asc = numeroAsc;
         }
 
         this.vistaConfiguracion.llenar(i);
-        super.add(this.vistaConfiguracion, 6,1);
+        this.add(this.vistaConfiguracion, 6,1, 1 , 2);
 
-        this.vistaLlamadasExterioresBajar.dibujarLlamadas();
-        this.vistaLlamadasExterioresSubir.dibujarLlamadas();
-        super.add(this.vistaLlamadasExterioresSubir, 0, 1);
-        super.add(this.vistaLlamadasExterioresBajar, 5, 1);
+        this.vistaLlamadasExterioresBajar.dibujarLlamadas(18);//this.controladorMonitoreo.getAscensores().get(numero_asc).getParadas());
+        this.vistaLlamadasExterioresSubir.dibujarLlamadas(18);//this.controladorMonitoreo.getAscensores().get(numero_asc).getParadas());
+        this.add(this.vistaLlamadasExterioresSubir, 0, 1);
+        this.add(this.vistaLlamadasExterioresBajar, 5, 1);
     }
 
-    private void setearLabels(LinkedList<VistaAscensor> asc) {
+    private void setearLabels() {
 
         Label LES = new Label("Subir");
         LES.setStyle("-fx-font-size: 9px;" +
                 "-fx-font-weight: bold;");
         LES.setAlignment(Pos.CENTER);
         LES.setMinWidth(30);
-        super.add(LES, 0,0);
+        this.add(LES, 0,0);
 
         Label configAscensores = new Label("Configuración y eventos de ascensores");
         configAscensores.setStyle("-fx-font-size: 9px;" +
                 "-fx-font-weight: bold;");
         configAscensores.setAlignment(Pos.CENTER);
         configAscensores.setMinWidth(200);
-        super.add(configAscensores, 6, 0);
+        this.add(configAscensores, 6, 0);
 
         Label LEB = new Label("Bajar");
         LEB.setStyle("-fx-font-size: 9px;" +
                 "-fx-font-weight: bold;");
         LEB.setMinWidth(30);
         LEB.setAlignment(Pos.CENTER);
-        super.add(LEB, 5,0);
+        this.add(LEB, 5,0);
 
         Label lEventoDspc = new Label("Evento dsp");
         lEventoDspc.setStyle("-fx-font-size: 9px;" +
@@ -83,40 +90,44 @@ public class VistaGrilla extends GridPane {
                 "-fx-font-weight: bold;");
         lEventoDspc.setAlignment(Pos.CENTER);
         lEventoDspc.setMaxWidth(527);
-        super.add(lEventoDspc,1, 3, asc.size(),1);
+//        if (this.vistaAscensores.size() == 1){
 
+            this.add(lEventoDspc,1, 3, 1,1);
+ //       }
     }
 
     private void propGrilla() {
 
-        super.setAlignment(Pos.CENTER);
-        super.setHgap(5);
+        this.setAlignment(Pos.CENTER);
+        this.setHgap(5);
     }
 
     private void labelNoHayAscConectados() {
 
         Label label = new Label("No hay ascensores conectados.");
-        super.add(label, 2,3);
+        this.add(label, 2,3);
     }
 
-    public void dibujarGrilla(LinkedList<VistaAscensor> vistaAscensores) {
+    public void dibujarGrilla(HashMap<Integer, VistaAscensor> vistaAscensores) {
 
-        LinkedList<VistaAscensor> vistaAscensor = vistaAscensores;
+        this.vistaAscensores = vistaAscensores;
+        System.out.println(vistaAscensores);
         propGrilla();
+        setearLabels();setearColumnas();
+      /*  if (this.vistaAscensores.isEmpty()) {
 
-        if (!vistaAscensor.isEmpty()) {
+          labelNoHayAscConectados();
+        } else {
 
-            setearLabels(vistaAscensor);
-            setearColumnas(vistaAscensor);
-
-        }else {
-
-            labelNoHayAscConectados();
-        }
+          controladorMonitoreo.actualizar();
+        }*/
     }
 
-    public void update() {
+    public void update(HashMap<Integer, VistaAscensor> vistaAscensores) {
 
+
+       /*
+        this.dibujarGrilla(vistaAscensores);*/
     }
 }
 

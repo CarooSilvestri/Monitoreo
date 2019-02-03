@@ -27,14 +27,15 @@ public class VistaAscensor extends GridPane {
         this.asigLB2 = new VistaAsignadas(pisos);
         this.vistaCabina = new VistaCabina(pisos, ascensor);
         this.controladorAscensor = new ControladorAscensor(ascensor, this);
+        this.pisos = controladorAscensor.getPisos();
     }
 
     private void formatoAscensor() {
 
-        super.setStyle(" -fx-border-color: black;" +
+        this.setStyle(" -fx-border-color: black;" +
                 "-fx-background-color: black;");
-        super.minWidth(100);
-        super.setAlignment(Pos.BOTTOM_CENTER);
+        this.minWidth(100);
+        this.setAlignment(Pos.BOTTOM_CENTER);
     }
 
     private void numerarPisos() {
@@ -48,13 +49,13 @@ public class VistaAscensor extends GridPane {
         this.asigLS2.generarCabinas();
         this.asigLB2.generarCabinas();
 
-        super.add(this.asigLS1, 0, 0);
-        super.add(this.asigLB1, 1, 0);
-        super.add(this.asigLS2, 2, 0);
-        super.add(this.asigLB2, 3, 0);
-        super.add(this.vistaCabina, 4, 0);
-        super.add(this.vistaParadasLado1, 5, 0);
-        super.add(this.vistaParadasLado2, 6, 0);
+        this.add(this.asigLS1, 0, 0);
+        this.add(this.asigLB1, 1, 0);
+        this.add(this.asigLS2, 2, 0);
+        this.add(this.asigLB2, 3, 0);
+        this.add(this.vistaCabina, 4, 0);
+        this.add(this.vistaParadasLado1, 5, 0);
+        this.add(this.vistaParadasLado2, 6, 0);
     }
 
     public void dibujarAscensor() {

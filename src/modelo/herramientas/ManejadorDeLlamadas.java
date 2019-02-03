@@ -3,6 +3,7 @@ package modelo.herramientas;
 import modelo.herramientas.ManejadorDeStrings;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class ManejadorDeLlamadas extends LinkedList<Integer> {
 
@@ -30,7 +31,7 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
         }
     }
 
-    public LinkedList<Integer> getListaLLamadas(LinkedList<Integer> sublista) {
+    public LinkedList<Integer> getListaLLamadas(List<Integer> sublista) {
 
         setLlamadas(sublista.get(0), sublista.get(1), sublista.get(2), sublista.get(3));
         return this;
