@@ -27,11 +27,11 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
         int j = 32;
         for (int i = llamadas.length() - 1; i >= 0; i--) {
 
-            if (llamadas.charAt(i) != '1') super.add(Math.abs(i - j));
+            if (llamadas.charAt(i) == '0') this.add(Math.abs(i - j));
         }
     }
 
-    public LinkedList<Integer> getListaLLamadas(List<Integer> sublista) {
+    public LinkedList<Integer> getListaLLamadas(LinkedList<Integer> sublista) {
 
         setLlamadas(sublista.get(0), sublista.get(1), sublista.get(2), sublista.get(3));
         return this;

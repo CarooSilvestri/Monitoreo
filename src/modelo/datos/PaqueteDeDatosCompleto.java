@@ -10,9 +10,10 @@ public class PaqueteDeDatosCompleto extends LinkedList<PaqueteDeDatosParcial> {
         super.add(paqueteDeDatosParcial);
     }
 
-
     public boolean estaCompleto() {
 
         return super.size() == 5;
     }
+
+
 }

@@ -25,7 +25,7 @@ public class ControladorLlamadaExterior implements EventHandler<MouseEvent> {
     public void handle(MouseEvent event){
 
         if (this.piso != this.pisoAnterior) {
-            ImageView imgLlamada = new ImageView("Sin título.png ");
+            ImageView imgLlamada = new ImageView("Pasajero.bmp");
             labelCambiar.setGraphic(imgLlamada);
           //  llamadaExterior.generarLlamadaExterior(piso);
             this.pisoAnterior = piso;

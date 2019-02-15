@@ -13,21 +13,6 @@ public class ControladorSalir implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
 
-        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
-        alerta.setTitle("Salir");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Está seguro que quiere salir?");
-        Optional<ButtonType> resultado = alerta.showAndWait();
-
-        if (resultado.get() == ButtonType.OK){
-
             System.exit(0);
-        } else {
-
-
-        }
-        alerta.show();
     }
-
-
 }

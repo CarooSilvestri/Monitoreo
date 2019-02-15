@@ -1,6 +1,7 @@
 package modelo.datos;
 
 import controladores.ControladorMonitoreo;
+import java.util.Observable;
 import modelo.Despacho;
 import modelo.ascensor.Ascensor;
 
@@ -18,11 +19,10 @@ public class Data {
         this.ascensores = new HashMap<Integer, Ascensor>();
         this.despacho = new Despacho();
         this.controladorMonitoreo = ControladorMonitoreo.getInstancia();
-
     }
 
     public void acomodarDatosEntrantes(PaqueteDeDatosCompleto paqueteDatos) {
-        controladorMonitoreo.setData(this);
+
         for (PaqueteDeDatosParcial datosAscensor : paqueteDatos) {
 
             int numero_asc = datosAscensor.getFirst();
@@ -59,4 +59,6 @@ public class Data {
 
         return this.despacho;
     }
+
+
 }

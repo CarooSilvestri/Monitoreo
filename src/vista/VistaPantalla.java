@@ -1,24 +1,23 @@
 package vista;
 
-import controladores.ControladorMonitoreo;
 import javafx.scene.layout.*;
+import modelo.datos.Data;
 
 import java.util.HashMap;
 
-public class VistaPantalla extends BorderPane {
+public class VistaPantalla extends BorderPane{
 
     private VistaGrilla grilla;
     private HashMap<Integer, VistaAscensor> vistaAscensor;
     private VistaMenu vistaMenu;
 
-    private ControladorMonitoreo controladorMonitoreo;
-
     public VistaPantalla() {
 
-        this.controladorMonitoreo = ControladorMonitoreo.getInstancia();
         this.vistaAscensor = new HashMap<Integer, VistaAscensor>();
         this.vistaMenu = new VistaMenu();
         this.grilla = new VistaGrilla();
+        this.vistaMenu.dibujarMenu();
+        this.ubicacionPaneles();
     }
 
     private void ubicacionPaneles() {
@@ -27,32 +26,31 @@ public class VistaPantalla extends BorderPane {
         this.setCenter(this.grilla);
     }
 
-    private void setearAscensores(){
+    private void setearAscensores(Data data){
 
-        if (!this.controladorMonitoreo.getAscensores().isEmpty()) {
+        if (!data.getAscensores().isEmpty()) {
 
-            for (Integer ascensor: this.controladorMonitoreo.getAscensores().keySet()) {
+            for (Integer ascensorID: data.getAscensores().keySet()) {
 
-                this.vistaAscensor.put(ascensor,
-                        new VistaAscensor(this.controladorMonitoreo.getAscensores().get(ascensor)));
+                if (!this.vistaAscensor.containsKey(ascensorID))
+                    this.vistaAscensor.put(ascensorID,
+                        new VistaAscensor(data.getAscensores().get(ascensorID)));
             }
         }
     }
 
-    public void dibujar() {
+    public void dibujar(Data data) {
 
-        this.vistaMenu.dibujarMenu();
-        this.grilla.dibujarGrilla(this.vistaAscensor);
+        this.grilla.dibujarGrilla(this.vistaAscensor, data);
         ubicacionPaneles();
     }
 
+    public void actualizar(Data data) {
 
-    public void actualizar() {
+        setearAscensores(data);
 
-        setearAscensores();
-       // ubicacionPaneles();
-      //  System.out.println(this.vistaAscensor);
-        this.grilla.update(this.vistaAscensor);
+        this.grilla.update(this.vistaAscensor, data);
     }
+
 }
 
