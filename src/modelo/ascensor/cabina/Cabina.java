@@ -1,46 +1,68 @@
 package modelo.ascensor.cabina;
 
+import java.util.LinkedList;
+
 public class Cabina {
 
-    private String estadoCabinaL1;
-    private String estadoCabinaL2;
+    private Puerta estadoCabinaL1;
+    private Puerta estadoCabinaL2;
 
     public Cabina() {
 
-        this.estadoCabinaL2 = this.estadoCabinaL1 = "CabinaDefault";
+        this.estadoCabinaL1 = new Puerta();
+        this.estadoCabinaL2 = new Puerta();
     }
 
     public void estadoCabina(char estacionado, char estacionando) {
 
-
-        if (estacionado == '1') this.estadoCabinaL1 = this.estadoCabinaL2 = "CabinaEstacionada";
-        if (estacionando == '1') this.estadoCabinaL1 = this.estadoCabinaL2 = "CabinaEstacionando";
+        this.estadoCabinaL1.puertasEnMovimiento(estacionado, estacionando);
+        this.estadoCabinaL2.puertasEnMovimiento(estacionado, estacionando);
     }
 
     public void acomodarPuertas(String puertasSFR, String puertasAC, String reopen) {
 
-/*        if (puertasSFR.charAt(0) == '1') this.estado = "CabinaAbierta";
+        this.estadoCabinaL1.puertas(recopilarDatosLado(puertasSFR, puertasAC, reopen, 1));
+        this.estadoCabinaL2.puertas(recopilarDatosLado(puertasSFR, puertasAC, reopen, 2));
+    }
 
-        if (puertasSFR.charAt(4) == '1') this.estado = "CabinaAbriendoFalla";
-        if (puertasSFR.charAt(5) == '1') this.estado = "CabinaAbriendoFalla";
+    private LinkedList<Character> recopilarDatosLado(String puertasSFR, String puertasAC, String reopen, int lado) {
 
-        if (puertasSFR.charAt(6) == '1') this.estado = "CabinaAbierta";
-        if (puertasSFR.charAt(7) == '1') this.estado = "CabinaAbierta";
+        /* 0 -> Seg / 1,2 -> fallas / 3,4 -> ABRIR-CERRAR / 5,6 -> Reopen-FAP*/
 
-        if (puertasAC.charAt(7) == '1') this.estado = "CabinaAbriendo";
-        if (puertasAC.charAt(6) == '1') this.estado = "CabinaCerrando";*/
+        LinkedList<Character> datosTotales = new LinkedList<Character>();
 
-        if (reopen.charAt(6) == '1') this.estadoCabinaL1 = "CabinaAbiertaReopen";
-        if (reopen.charAt(4) == '1') this.estadoCabinaL2 = "CabinaAbiertaReopen";
+        datosTotales.add(puertasSFR.charAt(0));
+
+        if (lado == 1) {
+
+            datosTotales.add(puertasSFR.charAt(5));
+            datosTotales.add(puertasSFR.charAt(7));
+            datosTotales.add(puertasAC.charAt(7));
+            datosTotales.add(puertasAC.charAt(6));
+            datosTotales.add(reopen.charAt(7));
+            datosTotales.add(reopen.charAt(6));
+            System.out.println(reopen);
+
+        } else {
+
+            datosTotales.add(puertasSFR.charAt(4));
+            datosTotales.add(puertasSFR.charAt(6));
+            datosTotales.add(puertasAC.charAt(5));
+            datosTotales.add(puertasAC.charAt(4));
+            datosTotales.add(reopen.charAt(5));
+            datosTotales.add(reopen.charAt(4));
+        }
+
+        return datosTotales;
     }
 
     public String getEstadoCabinaL1() {
 
-        return this.estadoCabinaL1;
+        return this.estadoCabinaL1.getEstado();
     }
 
     public String getEstadoCabinaL2() {
 
-        return this.estadoCabinaL2;
+        return this.estadoCabinaL2.getEstado();
     }
 }

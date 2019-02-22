@@ -1,41 +1,39 @@
 package vista;
 
-import controladores.controladores_menu.ControladorSalir;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
-
-import java.util.HashMap;
+import vista.botones.BtnAlarmaIncendio;
+import vista.botones.BtnProgramador;
 
 public class VistaMenu extends HBox {
 
     private void barraMenu() {
 
-        Button btnCS = new Button("Configuración del sistema");
+        Label lMonitoreo = new Label("Monitoreo Silcon - V 1.0");
+        lMonitoreo.setStyle( "-fx-font-size: 12px;" +
+                "-fx-text-fill: white;" +
+                "-fx-font-weight: bold;");
 
         Button btnAL = new Button("Anulacion llamadas");
        // btnAL.setOnAction(new ControladorAnulacionLlamadas(ascensor));
 
-        Button btnAI = new Button("Alarma de incendio");
-        btnAI.setStyle("-fx-background-color: red;" +
-                "-fx-font-size: 9px;" +
-                "-fx-text-fill: white;" +
-                "-fx-font-weight: bold;");
-       // btnAI.setOnAction(new ControladorAlarmaIncendio());
+        Button btnAI = new BtnAlarmaIncendio();
+        BtnProgramador btnProgramador = new BtnProgramador();
 
-        Button btnSalir = new Button("Salir");
-        btnSalir.setOnAction(new ControladorSalir());
+        this.formato();
+        this.getChildren().addAll(lMonitoreo, btnAL, btnAI, btnProgramador);
+    }
 
-        HBox subh = new HBox(btnCS, btnAL, btnAI);
-        subh.setSpacing(15);
+    private void formato() {
 
-        this.setSpacing(442);
+        this.setSpacing(25);
         this.setStyle("-fx-background-color:  #336699;" +
                 "-fx-font-size: 9px;");
-        this.setPadding(new Insets(3,0,3,4));
+        this.setPadding(new Insets(3,5,3,10));
         this.setAlignment(Pos.CENTER_LEFT);
-        this.getChildren().addAll(subh, btnSalir);
     }
 
     public void dibujarMenu() {

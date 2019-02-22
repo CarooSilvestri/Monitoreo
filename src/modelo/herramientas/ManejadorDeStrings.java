@@ -2,7 +2,7 @@ package modelo.herramientas;
 
 public class ManejadorDeStrings {
 
-    public String leadingZeros (int numeroAstr) {
+    public String leadingZeros(int numeroAstr) {
 
         String strNumero = Integer.toBinaryString(numeroAstr);
 

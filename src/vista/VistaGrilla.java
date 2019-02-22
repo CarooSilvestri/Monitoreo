@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import modelo.datos.Data;
+import vista.vista_llamadas.VistaLlamadasExteriores;
 
 import java.util.HashMap;
 
@@ -162,7 +163,6 @@ public class VistaGrilla extends GridPane {
             i++;
 
         }
-
     }
 
     private void propGrilla() {

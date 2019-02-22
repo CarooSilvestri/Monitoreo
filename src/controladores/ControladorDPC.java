@@ -20,8 +20,5 @@ public class ControladorDPC {
         return this.dpc.getFallas();
     }
 
-    public HashMap<String, LinkedList<Integer>> getLlamadas(String tipoLlamada) {
 
-        return this.dpc.getLlamadas().get(tipoLlamada);
-    }
 }

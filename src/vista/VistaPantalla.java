@@ -33,6 +33,7 @@ public class VistaPantalla extends BorderPane{
             for (Integer ascensorID: data.getAscensores().keySet()) {
 
                 if (!this.vistaAscensor.containsKey(ascensorID))
+
                     this.vistaAscensor.put(ascensorID,
                         new VistaAscensor(data.getAscensores().get(ascensorID)));
             }
@@ -48,7 +49,6 @@ public class VistaPantalla extends BorderPane{
     public void actualizar(Data data) {
 
         setearAscensores(data);
-
         this.grilla.update(this.vistaAscensor, data);
     }
 

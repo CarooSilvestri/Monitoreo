@@ -1,6 +1,5 @@
 package modelo.ascensor;
 
-import modelo.Fallas;
 import modelo.datos.PaqueteDeDatosParcial;
 import modelo.herramientas.ManejadorDeLlamadas;
 import modelo.ascensor.cabina.Cabina;
@@ -13,24 +12,15 @@ public class Ascensor {
 
     private int posAct, paradas, paradaInf, paradaSup, evento;
     private Cabina cabina;
-    private Fallas fallas;
     private ConfiguracionAscensor configuracionAscensor;
     private char recuperado, lado2Hab; // 0 = perdido, 1 = recuperado
     private String dirProx, dirAct;
     private ManejadorDeLlamadas manejadorDeLlamadas;
     private ManejadorDeStrings manejadorDeStrings;
-    public HashMap<String, LinkedList<Integer>> llamadasSubirL1, llamadasBajarL1, llamadasSubirL2, llamadasBajarL2,
-            llamadasCabinaL1, llamadasCabinaL2;
 
     public Ascensor() {
 
         this.cabina = new Cabina();
-        this.llamadasSubirL1 = new HashMap<String, LinkedList<Integer>>();
-        this.llamadasBajarL1 = new HashMap<String, LinkedList<Integer>>();
-        this.llamadasSubirL2 = new HashMap<String, LinkedList<Integer>>();
-        this.llamadasBajarL2 = new HashMap<String, LinkedList<Integer>>();
-        this.llamadasCabinaL1 = new HashMap<String, LinkedList<Integer>>();
-        this.llamadasCabinaL2 = new HashMap<String, LinkedList<Integer>>();
         this.configuracionAscensor = new ConfiguracionAscensor();
         this.manejadorDeLlamadas = new ManejadorDeLlamadas();
         this.manejadorDeStrings = new ManejadorDeStrings();
@@ -161,12 +151,6 @@ public class Ascensor {
     public int getEvento () {
 
         return this.evento;
-    }
-
-    public HashMap<String, LinkedList<Integer>> getLlamadasAscensor() {
-
-        return null;
-      //  return this.llamadasAscensor;
     }
 
     public String getDirProx() {

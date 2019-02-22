@@ -2,6 +2,8 @@ package modelo;
 
 import modelo.datos.PaqueteDeDatosParcial;
 import modelo.herramientas.ManejadorDeLlamadas;
+import modelo.llamadas.Lado;
+import modelo.llamadas.exteriores.LlamadaExtNormal;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -9,90 +11,62 @@ import java.util.LinkedList;
 public class Despacho {
 
     private ManejadorDeLlamadas manejadorDeLlamadas;
-    private HashMap<String, LinkedList<Integer>> subirL1, bajarL1, subirL2, bajarl2;
-    private HashMap<String, HashMap<String, LinkedList<Integer>>> llamadas;
+    private Lado lado1, lado2;
+    private LinkedList<Lado> llamadas;
     private HashMap<Integer, Fallas> fallas;
     private int eventoDPC;
+    private PaqueteDeDatosParcial dataDpc;
 
     public Despacho() {
 
         this.manejadorDeLlamadas = new ManejadorDeLlamadas();
-        this.subirL1 = new HashMap<String, LinkedList<Integer>>();
-        this.bajarL1 = new HashMap<String, LinkedList<Integer>>();
-        this.subirL2 = new HashMap<String, LinkedList<Integer>>();
-        this.bajarl2 = new HashMap<String, LinkedList<Integer>>();
-        this.llamadas = new  HashMap<String, HashMap<String, LinkedList<Integer>>>();
+        this.lado1 = new Lado();
+        this.lado2 = new Lado();
+        this.llamadas = new LinkedList<Lado>();
         this.fallas = new HashMap<Integer, Fallas>();
     }
 
     public void actualizar(PaqueteDeDatosParcial dataDPC) {
 
-        // 4 - 7 LLAMADAS SUBIR LADO 1
-        this.subirL1.put("HOMBRECITO", generarListaLlamadas(dataDPC.generarSublista(4, 7)));
+        this.dataDpc = dataDPC;
 
-        // 8 - 11 LLAMADAS BAJAR LADO 1
-        this.bajarL1.put("HOMBRECITO", generarListaLlamadas(dataDPC.generarSublista(8, 11)));
+        // INDICES LADO 1
+        LinkedList<Integer> llamadasNExt1 = dataDPC.generarSublista(4, 11);
+        LinkedList<Integer> llamadasFallas1 =  dataDPC.generarSublista(20, 27);
+        LinkedList<Integer> llamadasVip1 =  dataDPC.generarSublista(36,43);
 
-        // 12 - 15 LLAMADAS SUBIR LADO 2
-        this.subirL2.put("HOMBRECITO", generarListaLlamadas(dataDPC.generarSublista(12, 15)));
+        // INDICES LADO 2
+        LinkedList<Integer> llamadasNExt2 =  dataDPC.generarSublista(12, 19);
+        LinkedList<Integer> llamadasFallas2 =  dataDPC.generarSublista(28, 35);
+        LinkedList<Integer> llamadasVip2 =  dataDPC.generarSublista(44, 51);
 
-        // 16 - 19 LLAMADAS BAJAR LADO 2
-        this.bajarl2.put("HOMBRECITO", generarListaLlamadas(dataDPC.generarSublista(16,19)));
+        this.lado1.distribuirLLamadas(llamadasNExt1, llamadasFallas1, llamadasVip1);
+        this.lado2.distribuirLLamadas(llamadasNExt2, llamadasFallas2, llamadasVip2);
 
-        // 20 - 23 FALLA SUBIR LADO 1
-        this.subirL1.put("INHIBIDA", generarListaLlamadas(dataDPC.generarSublista(16,19)));
-
-        // 24 - 27 FALLA BAJAR LADO 1
-        this.bajarL1.put("INHIBIDA", generarListaLlamadas(dataDPC.generarSublista(16,19)));
-
-        // 28 - 31 FALLA SUBIR LADO 2
-        this.subirL2.put("INHIBIDA", generarListaLlamadas(dataDPC.generarSublista(16,19)));
-
-        // 32 - 35 FALLA BAJAR LADO 2
-        this.bajarl2.put("INHIBIDA", generarListaLlamadas(dataDPC.generarSublista(16,19)));
-
-        // 36 - 39 LLAMADAS VIP SUBIR LADO 1
-        this.subirL1.put("VIP", generarListaLlamadas(dataDPC.generarSublista(36, 39)));
-
-        // 40 - 43 LLAMADAS VIP BAJAR LADO 1
-        this.bajarL1.put("VIP", generarListaLlamadas(dataDPC.generarSublista(40, 43)));
-
-        // 44 - 47 LLAMADAS VIP SUBIR LADO 2
-        this.subirL2.put("VIP", generarListaLlamadas(dataDPC.generarSublista(44, 47)));
-
-        // 48 - 51 LLAMADAS VIP BAJAR LADO 2
-        this.bajarl2.put("VIP", generarListaLlamadas(dataDPC.generarSublista(48, 51)));
+        this.llamadas.add(this.lado1);
+        this.llamadas.add(this.lado2);
 
         // FALLAS
         this.fallas.put(65, new Fallas(52, 61, dataDPC).agregarFallas());
-
         this.fallas.put(66, new Fallas(62, 71, dataDPC).agregarFallas());
-
         this.fallas.put(67, new Fallas(72, 81, dataDPC).agregarFallas());
-
         this.fallas.put(68, new Fallas(82, 91, dataDPC).agregarFallas());
 
         this.eventoDPC = dataDPC.getElemento(92);
-
-
-        this.llamadas.put("SubirL1", subirL1);
-        this.llamadas.put("BajarL1", bajarL1);
-        this.llamadas.put("SubirL2", subirL2);
-        this.llamadas.put("BajarL2", bajarl2);
     }
 
-    private LinkedList<Integer> generarListaLlamadas(LinkedList<Integer> sublista) {
+    public int getEventoDPC() {
 
-        return this.manejadorDeLlamadas.getListaLLamadas(sublista);
-    }
-
-    public HashMap<String, HashMap<String, LinkedList<Integer>>> getLlamadas() {
-
-        return llamadas;
+        return eventoDPC;
     }
 
     public HashMap<Integer, Fallas> getFallas() {
 
         return this.fallas;
+    }
+
+    public LinkedList<Lado> getLlamadas() {
+
+        return this.llamadas;
     }
 }

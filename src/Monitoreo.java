@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 import modelo.datos.Data;
 import modelo.datos.PaqueteDeDatosParcial;
@@ -122,12 +123,7 @@ public class Monitoreo extends Application {
         new Monitoreo();
 
         Scene scene = new Scene(vistaPantalla, 800, 480);
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-
-            public void handle(WindowEvent we) {
-                System.exit(0);
-            }
-        });
+        primaryStage.initStyle(StageStyle.UNDECORATED);
 
 
         puertos = CommPortIdentifier.getPortIdentifiers();
