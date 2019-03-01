@@ -1,0 +1,101 @@
+0;Reset por Power On
+1;Excedió tiempo de viaje (no leyó pantallas por mas de X seg.)
+2;Falla de partida (pantalla leida mas de 5 seg al partir)
+3;Fallo nivelacion (vencio T nivelacion)
+4;Fallo sincronización en extremo
+5;FALLÓ GRABACIÓN EN FLASH (PROTEGIDA O ERROR DE ACCESO)
+6;Cuenta llego a extremo pero no esta en sincronismo
+7;Encontro sincro antes de lo previsto
+8;Falla en control de accionamiento / Contactor trabado 
+9;Excedió cantidad de reaperturas
+10;PTC activado
+11;Reset por ILLAD, ILLOP, Low Voltage
+12;Falla de seteo (accionamiento o seteo de variables)
+13;Pesador 100% activo mas de 30 segundos
+14;Puertas Automáticas: REAP activo mas de 30 SEG (EN PISO)
+;Puertas manuales -> Puerta abierta mas de 30 SEG (EN PISO)
+15;Fallo comunicación con despacho
+16;Fallo comunicación con despacho (no hay habilitacion para TX)
+17;Fallo comunicación con cabina
+18;Fallo comunicación con algun piso
+19;Error comando DPC
+20;STOP abierto con ascensor en viaje en alta
+21;Seguridad abierta con ascensor en viaje en alta
+22;SIN USO
+23;SIN USO
+24;SIN USO
+25;STOP abierto con ascensor en baja
+26;Seguridad abierta con ascensor en baja
+27;SIN USO
+28;SIN USO
+29;PUERTA MANUAL ABIERTA MAS DE 30 SEG FUERA DE PISO
+30;STOP abierto al partir               (dentro de los 2 segundos de la partida)
+31;Seguridad abierta al partir        (dentro de los 2 segundos de la partida)
+32;SIN USO
+33;SIN USO
+34;SIN USO
+35;Seguridad fallo al cerrar
+36;SIN USO
+37;SIN USO
+38;SIN USO
+39;Excedio presion máxima
+40;Seguridades puenteadas (FAP y SEG activos al abrir)
+41;SIN USO
+42;Falló destrabe rampa HD (SLC20)
+43;EXCESO DE ARRANQUES/HORA
+44;Falla en cierre de puertas EN PISO (excedio t de cierre)
+45;Falla en apertura de puertas (excedio t de apertura) LADO 1
+46;FAP activo con SEG cerradas (al cerrar)
+47;Cancela abrir por parar fuera de zona de puertas
+48;Seguridades cerradas sin orden de cerrar
+49;Falla en apertura de puertas (excedio t de apertura) LADO 2
+50;SIN USO
+51;SIN USO
+52;Ambos sincronismos activados al mismo tiempo
+53;Sincronismo UP activado siempre (falla en sincronismo)
+54;Sincronismo DN activado siempre (falla en sincronismo)
+55;Leyo y perdio sincronismo DN
+56;Leyo y perdio sincronismo UP
+57;SIN USO
+58;SIN USO
+59;SIN USO
+60;SIN USO
+61;SIN USO
+62;SIN USO
+63;SIN USO
+64;ERROR EN PANTALLAS DE PISO (CLS Y CLB INVERTIDAS)
+65;ERROR DE LECTURA DE CLS O CLB
+66;CLS y CLB leídas al mismo tiempo
+67;Falso disparo de IRQ
+68;Cabezal CLS no funciona
+69;Cabezal CLB no funciona
+70;Cabezal siempre encendido
+71;- Limite de sincronizacion inferior instalado antes de pantalla CAB
+;- Limite de sincronizacion superior instalado antes de pantalla CAS
+72;Falla en pantalla CLS (perdio CAS)
+73;Falla en pantalla CLB (perdio CAB)
+74;Perdió pantalla CLS al nivelar
+75;Perdió pantalla CLB al nivelar
+76;Perdió pantalla CLS piso en alta
+77;Perdió pantalla CLB piso en alta
+78;Llamada de cabina retenida
+79;Llamada exterior retenida
+81;Fallo renivelacion en hidráulicos
+82;Direccion de viaje incorrecta
+83;Falla en partida (despues de 3 intentos)
+84;3 paradas anormales consecutivas
+85;Paro fuera de zona de puerta subiendo
+86;Paro fuera de zona de puerta bajando
+87;SIN USO
+88;SIN USO
+89;SIN USO
+90;Manual
+91;Fuerza Motriz Emergencia activada (EPD activado)
+92;Bombero exterior activado (Fase 1)
+93;SIN USO
+94;SIN USO
+95;Marca de Supervisor
+;
+;
+;
+;
