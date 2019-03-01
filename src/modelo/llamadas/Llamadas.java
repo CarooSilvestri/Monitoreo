@@ -3,47 +3,23 @@ package modelo.llamadas;
 import modelo.herramientas.ManejadorDeLlamadas;
 import java.util.LinkedList;
 
-public class Llamadas extends LinkedList<Integer> {
+public class Llamadas {
 
-    private Subir subir;
-    private Bajar bajar;
-    private LinkedList<Integer> tipoLlamada;
     private ManejadorDeLlamadas manejadorDeLlamadas;
+    private LinkedList<Integer> llamadas;
 
     public Llamadas() {
 
-        this.subir = new Subir();
-        this.bajar = new Bajar();
         this.manejadorDeLlamadas = new ManejadorDeLlamadas();
     }
 
-    public void acomodarLlamadas(LinkedList<Integer> tipoLlamada) {
+    public void llenar(LinkedList<Integer> tipoLlamadaa) {
 
-        this.tipoLlamada = tipoLlamada;
-        this.subir.llenarSubir(generarSublista(0, 3));
-        this.bajar.llenarBajar(generarSublista(4, 7));
+        this.llamadas = this.manejadorDeLlamadas.getListaLLamadas(tipoLlamadaa);
     }
 
-    private LinkedList<Integer> generarSublista(int ini, int fin) {
+    public LinkedList<Integer> getLlamadas() {
 
-        LinkedList<Integer> nuevaLista = new LinkedList<Integer>();
-
-        for (int i = ini; i <= fin; i++) {
-
-            nuevaLista.add(this.tipoLlamada.get(i));
-        }
-        return nuevaLista;
+        return this.llamadas;
     }
-
-    protected Subir getSubir() {
-
-        return this.subir;
-    }
-
-    protected Bajar getBajar() {
-
-        return this.bajar;
-    }
-
-
 }

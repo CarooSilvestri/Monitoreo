@@ -20,28 +20,38 @@ public class VistaConfiguracion extends Accordion {
     private VistaLogFallas logFallas;
     private TitledPane tn;
     private Label lTit;
-    private int i;
 
     public VistaConfiguracion() {
 
         this.logFallas = new VistaLogFallas();
-        this.lTit = new Label();
+        // this.lTit = new Label();
     }
-
 
     public void llenar(HashMap<Integer, VistaAscensor> vistaAscensores, ControladorDPC controladorDPC){
 
         this.controladorDPC = controladorDPC;
 
         this.getPanes().clear();
-        this.i = 1;
+        int i = 1;
         for (int vistaAscensorID: vistaAscensores.keySet()) {
 
             this.ctrlConfig = new ControladorConfiguracion(this,
                     vistaAscensores.get(vistaAscensorID).getControladorAscensor().getConfigAsc());
-
+            this.lTit = new Label();
             this.tn = new TitledPane();
-            labelAutoManu();
+
+
+            if (this.ctrlConfig.isAuto()) {
+
+                this.lTit.setText("- AUTOMÁTICO -");
+                tn.setTextFill(Color.GREEN);
+            } else {
+
+                this.lTit.setText("- MANUAL -");
+                tn.setTextFill(Color.RED);
+            }
+            this.tn.setText("Ascensor " + Integer.toString(i) + " " + lTit.getText());
+
             this.tn.setContent(opciones(vistaAscensorID));
 
             this.tn.setStyle("-fx-font-size: 9px; -fx-font-weight: bold" );
@@ -56,7 +66,6 @@ public class VistaConfiguracion extends Accordion {
         CheckBox cbServInd = new CheckBox("Servicio Independiente");
         if (ctrlConfig.seleccionado("ServInd") == 0) cbServInd.setSelected(true);
         cbServInd.setOnAction(new ControladorServicioIndependiente());
-        //cbServInd.setMaxSize(5,5);
 
         CheckBox cbAscensorista = new CheckBox("Ascensorista");
         if (ctrlConfig.seleccionado("Ascensorista") == 0) cbServInd.setSelected(true);
@@ -90,6 +99,7 @@ public class VistaConfiguracion extends Accordion {
         this.logFallas.setTextAlignment(TextAlignment.LEFT);
 
         estadisticas.setContent(this.logFallas);
+
         Separator s = new Separator();
         s.setOrientation(Orientation.HORIZONTAL);
 
@@ -112,22 +122,12 @@ public class VistaConfiguracion extends Accordion {
 
     private void labelAutoManu() {
 
-        if (this.ctrlConfig.isAuto()) {
 
-            this.lTit.setText("- AUTOMÁTICO -");
-            tn.setTextFill(Color.GREEN);
-        } else {
-
-            this.lTit.setText("- MANUAL -");
-            tn.setTextFill(Color.RED);
-        }
-        this.tn.setText("Ascensor " + Integer.toString(i) + " " + lTit.getText());
     }
 
    public void actualizar(int vistaID) {
 
-       labelAutoManu();
-       this.logFallas.llenarLogFallas(vistaID, this.controladorDPC);
+        this.logFallas.llenarLogFallas(vistaID, this.controladorDPC);
    }
 
 

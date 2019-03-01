@@ -1,32 +1,38 @@
 package modelo.llamadas;
 
-import modelo.llamadas.exteriores.Inhibida;
-import modelo.llamadas.exteriores.LlamadaExtNormal;
-import modelo.llamadas.exteriores.Vip;
+import modelo.herramientas.ManejadorDeLlamadas;
 
 import java.util.LinkedList;
 
 public class Lado extends LinkedList<Llamadas> {
 
-    private LlamadaExtNormal llamadaExtNormal;
-    private Vip vip;
-    private Inhibida inhibida;
+    private LinkedList<LinkedList<Integer>> listaSubir, listaBajar;
+    private ManejadorDeLlamadas manejadorDeLlamadas;
 
     public Lado() {
 
-        this.llamadaExtNormal = new LlamadaExtNormal();
-        this.inhibida = new Inhibida();
-        this.vip = new Vip();
+        this.listaSubir = new LinkedList<LinkedList<Integer>>();
+        this.listaBajar = new LinkedList<LinkedList<Integer>>();
+        this.manejadorDeLlamadas = new ManejadorDeLlamadas();
     }
 
-    public void distribuirLLamadas(LinkedList<Integer> normal, LinkedList<Integer> falla, LinkedList<Integer> vip) {
+    public void separarSubirBajar(LinkedList<LinkedList<Integer>> llamadas) {
 
-        this.llamadaExtNormal.acomodarLlamadas(normal);
+        for (LinkedList<Integer> tipoLlamada: llamadas) {
 
-        this.inhibida.acomodarLlamadas(falla);
-
-        this.vip.acomodarLlamadas(vip);
+            this.listaSubir.add(this.manejadorDeLlamadas.generarSublista(0, 3, tipoLlamada));
+            this.listaBajar.add(this.manejadorDeLlamadas.generarSublista(4, 7, tipoLlamada));
+        }
     }
 
+    public LinkedList<LinkedList<Integer>> getListaSubir() {
+
+        return this.listaSubir;
+    }
+
+    public LinkedList<LinkedList<Integer>> getListaBajar() {
+
+        return this.listaBajar;
+    }
 
 }

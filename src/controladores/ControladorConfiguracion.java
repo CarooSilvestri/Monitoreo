@@ -16,7 +16,10 @@ public class ControladorConfiguracion {
 
     public String getTipoAsc() {
 
-        return  this.configuracionAscensor.getSetSlc();
+        String velocidad = this.configuracionAscensor.getSetSlc();
+        String fpfc = this.configuracionAscensor.getTipoAsc2();
+        String puertas = this.configuracionAscensor.getTipoPuertas();
+        return   velocidad + " " + fpfc + '\n' + puertas;
     }
 
     public char seleccionado(String configuracion) {

@@ -23,7 +23,7 @@ public class Data {
 
     public void acomodarDatosEntrantes(PaqueteDeDatosCompleto paqueteDatos) {
 
-        for (PaqueteDeDatosParcial datosAscensor : paqueteDatos) {
+        for (PaqueteDeDatosParcial datosAscensor: paqueteDatos) {
 
             int numero_asc = datosAscensor.getFirst();
 

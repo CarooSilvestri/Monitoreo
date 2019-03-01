@@ -42,7 +42,7 @@ public class VistaPantalla extends BorderPane{
 
     public void dibujar(Data data) {
 
-        this.grilla.dibujarGrilla(this.vistaAscensor, data);
+        this.grilla.dibujarGrilla(this.vistaAscensor);
         ubicacionPaneles();
     }
 

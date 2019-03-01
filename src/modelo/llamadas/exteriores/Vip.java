@@ -1,21 +1,21 @@
 package modelo.llamadas.exteriores;
 
-import modelo.llamadas.Bajar;
 import modelo.llamadas.Llamadas;
-import modelo.llamadas.Subir;
 
 import java.util.LinkedList;
 
 public class Vip extends Llamadas {
 
-    private Subir subir;
-    private Bajar bajar;
+    private LinkedList<Integer> llamadas;
 
+    public void a() {
+
+        this.llamadas = super.getLlamadas();
+        System.out.println(this.llamadas);
+    }
     @Override
-    public void acomodarLlamadas(LinkedList<Integer> tipoLlamada) {
+    public void llenar(LinkedList<Integer> tipoLlamadaa) {
 
-        super.acomodarLlamadas(tipoLlamada);
-        this.subir = super.getSubir();
-        this.bajar = super.getBajar();
+        super.llenar(tipoLlamadaa);
     }
 }

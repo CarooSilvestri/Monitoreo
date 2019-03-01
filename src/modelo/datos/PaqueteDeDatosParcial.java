@@ -41,6 +41,7 @@ public class PaqueteDeDatosParcial extends LinkedList<Integer> {
         LinkedList<Integer> sublista = new LinkedList<Integer>();
 
         for (int i = fin; i >= ini; i--) {
+
             sublista.add(this.get(i));
         }
         return sublista;

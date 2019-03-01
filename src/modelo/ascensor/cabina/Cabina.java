@@ -13,46 +13,41 @@ public class Cabina {
         this.estadoCabinaL2 = new Puerta();
     }
 
-    public void estadoCabina(char estacionado, char estacionando) {
+    public void acomodarPuertas(String puertasSFR, String puertasAC, String reopen, String estacionando) {
 
-        this.estadoCabinaL1.puertasEnMovimiento(estacionado, estacionando);
-        this.estadoCabinaL2.puertasEnMovimiento(estacionado, estacionando);
+        this.estadoCabinaL1.puertas(recopilarDatosLado(puertasSFR, puertasAC, reopen, estacionando, 1));
+        this.estadoCabinaL2.puertas(recopilarDatosLado(puertasSFR, puertasAC, reopen, estacionando, 2));
     }
 
-    public void acomodarPuertas(String puertasSFR, String puertasAC, String reopen) {
-
-        this.estadoCabinaL1.puertas(recopilarDatosLado(puertasSFR, puertasAC, reopen, 1));
-        this.estadoCabinaL2.puertas(recopilarDatosLado(puertasSFR, puertasAC, reopen, 2));
-    }
-
-    private LinkedList<Character> recopilarDatosLado(String puertasSFR, String puertasAC, String reopen, int lado) {
+    private LinkedList<Character> recopilarDatosLado(String puertasSFR, String puertasAC, String reopen,
+                                                     String estacionando, int lado) {
 
         /* 0 -> Seg / 1,2 -> fallas / 3,4 -> ABRIR-CERRAR / 5,6 -> Reopen-FAP*/
 
         LinkedList<Character> datosTotales = new LinkedList<Character>();
 
         datosTotales.add(puertasSFR.charAt(0));
+        datosTotales.add(estacionando.charAt(3));
+        datosTotales.add(estacionando.charAt(4));
 
         if (lado == 1) {
 
-            datosTotales.add(puertasSFR.charAt(5));
-            datosTotales.add(puertasSFR.charAt(7));
             datosTotales.add(puertasAC.charAt(7));
             datosTotales.add(puertasAC.charAt(6));
+            datosTotales.add(puertasSFR.charAt(7));
+            datosTotales.add(puertasSFR.charAt(5));
             datosTotales.add(reopen.charAt(7));
             datosTotales.add(reopen.charAt(6));
-            System.out.println(reopen);
 
         } else {
 
-            datosTotales.add(puertasSFR.charAt(4));
-            datosTotales.add(puertasSFR.charAt(6));
             datosTotales.add(puertasAC.charAt(5));
             datosTotales.add(puertasAC.charAt(4));
+            datosTotales.add(puertasSFR.charAt(6));
+            datosTotales.add(puertasSFR.charAt(4));
             datosTotales.add(reopen.charAt(5));
             datosTotales.add(reopen.charAt(4));
         }
-
         return datosTotales;
     }
 

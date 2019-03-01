@@ -5,33 +5,31 @@ import java.util.LinkedList;
 public class Puerta {
 
     private String estadoPuerta;
-    private char seg, abrir, cerrar, falla, fallareopen, reopen, fap;
-
-    public Puerta() {
-
-        this.estadoPuerta = "CabinaDefault";
-    }
+    private char seg, estacionando, estacionado, abrir, cerrar, falla, fallareopen, reopen, fap;
 
     public void puertas(LinkedList<Character> datos) {
 
-  //      System.out.println(datos);
         this.seg = datos.getFirst();
-        this.falla = datos.get(1);
-        this.fallareopen = datos.get(2);
-        this.cerrar = datos.get(3);
-        this.abrir = datos.get(4);
-        this.reopen = datos.get(5);
-        this.fap = datos.getLast();
+        this.estacionando = datos.get(1);
+        this.estacionado = datos.get(2);
+        this.abrir = datos.get(3);
+        this.cerrar = datos.get(4);
+        this.fallareopen = datos.get(5);
+        this.falla = datos.get(6);
+        this.fap = datos.get(7);
+        this.reopen = datos.get(8);
 
         this.setEstadoPuerta();
     }
 
     private void setEstadoPuerta() {
-/*
+
+        this.estadoPuerta = "CabinaDefault";
+
+        if (estacionado == '1') this.estadoPuerta = "CabinaEstacionada";
+        if (estacionando == '1') this.estadoPuerta = "CabinaEstacionando";
 
         if (this.seg == '1') this.estadoPuerta = "CabinaAbierta";
-        else this.estadoPuerta = "CabinaDefault";
-*/
 
         if (this.cerrar == '1') this.estadoPuerta = "CabinaCerrando";
 
@@ -39,34 +37,23 @@ public class Puerta {
 
         if (this.abrir == '1') this.estadoPuerta = "CabinaAbriendo";
 
-        if (isReopen()) this.estadoPuerta = "hoal";
+        if (isReopen()) this.estadoPuerta = "CabinaAbiertaReopen";
 
         if (this.fap == '1')this.estadoPuerta = "CabinaAbierta";
+
         //CONJUNTOS
 
-      //  if (this.seg == '0' && this.fap == '0') this.estadoPuerta = "Cabina";
+        if (this.seg == '0' && this.fap == '1') this.estadoPuerta = "Cabina";
 
         if (this.isReopen() && this.abrir == '1') this.estadoPuerta = "CabinaAbriendoReopen";
         if (this.isReopen() && this.cerrar == '1') this.estadoPuerta = "CabinaCerrandoReopen";
         if (this.isReopen() && this.fap == '1') this.estadoPuerta = "CabinaAbiertaReopen";
-
-
-        //System.out.println(this.estadoPuerta);
-
     }
 
     private boolean isReopen() {
 
         return this.reopen == '1';
     }
-
-    public void puertasEnMovimiento(char estacionado, char estacionando) {
-
-        if (estacionado == '1') this.estadoPuerta = "CabinaEstacionada";
-        if (estacionando == '1') this.estadoPuerta = "CabinaEstacionando";
-      //  System.out.println(estacionado);
-    }
-
 
     public String getEstado() {
 

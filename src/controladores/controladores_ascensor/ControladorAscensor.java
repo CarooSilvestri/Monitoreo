@@ -3,6 +3,8 @@ package controladores.controladores_ascensor;
 import modelo.ascensor.Ascensor;
 import modelo.ascensor.ConfiguracionAscensor;
 import modelo.ascensor.cabina.Cabina;
+import modelo.llamadas.ascensor.BotoneraCabina;
+import modelo.llamadas.ascensor.LadoAscensor;
 import vista.VistaAscensor;
 
 import java.util.HashMap;
@@ -44,11 +46,6 @@ public class ControladorAscensor {
         return this.ascensor.getEvento();
     }
 
-    public HashMap<String, LinkedList<Integer>> getLlamadasAsc() {
-
-        return this.ascensor.getLlamadasAscensor();
-    }
-
     public String getProximaDir() {
 
         return this.ascensor.getDirProx();
@@ -64,4 +61,13 @@ public class ControladorAscensor {
         return this.ascensor.getLado2Hab() == '0';
     }
 
+    public boolean perdido() {
+
+        return this.ascensor.getPosAct() == 0;
+    }
+
+    public LadoAscensor getLado(int lado) {
+
+        return this.ascensor.getLlamadas().get(lado);
+    }
 }

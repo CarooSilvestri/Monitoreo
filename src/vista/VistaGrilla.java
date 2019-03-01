@@ -7,15 +7,16 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import modelo.datos.Data;
-import vista.vista_llamadas.VistaLlamadasExteriores;
+import vista.vista_llamadas.exteriores.VistaLlamadasExtBajar;
+import vista.vista_llamadas.exteriores.VistaLlamadasExtSubir;
 
 import java.util.HashMap;
 
 public class VistaGrilla extends GridPane {
 
     private VistaConfiguracion vistaConfiguracion;
-    private VistaLlamadasExteriores vistaLlamadasExterioresSubir;
-    private VistaLlamadasExteriores vistaLlamadasExterioresBajar;
+    private VistaLlamadasExtSubir vistaLlamadasExterioresSubir;
+    private VistaLlamadasExtBajar vistaLlamadasExterioresBajar;
     private HashMap<Integer, VistaAscensor> vistaAscensores;
     private ControladorDPC controladorDPC;
     private int evento;
@@ -23,8 +24,8 @@ public class VistaGrilla extends GridPane {
 
     public VistaGrilla() {
 
-        this.vistaLlamadasExterioresSubir = new VistaLlamadasExteriores();
-        this.vistaLlamadasExterioresBajar = new VistaLlamadasExteriores();
+        this.vistaLlamadasExterioresSubir = new VistaLlamadasExtSubir();
+        this.vistaLlamadasExterioresBajar = new VistaLlamadasExtBajar();
         this.vistaConfiguracion = new VistaConfiguracion();
         this.controladorDPC = new ControladorDPC();
     }
@@ -56,7 +57,7 @@ public class VistaGrilla extends GridPane {
             }
 
             lEvento.setAlignment(Pos.CENTER);
-            lEvento.setMinWidth(150);
+            lEvento.setMinWidth(160);
 
             this.add(lEvento, i, 3);
             this.add(LAscensor, i, 0);
@@ -75,7 +76,7 @@ public class VistaGrilla extends GridPane {
 
     private void setearLLamadas(Data data) {
 
-        int pisos = data.getAscensores().get(65).getParadas();
+        int pisos = data.getAscensores().get(66).getParadas(); // try not to hardcode
 
         this.vistaLlamadasExterioresBajar.dibujarLlamadas(pisos, data.getDespacho());
         this.vistaLlamadasExterioresSubir.dibujarLlamadas(pisos, data.getDespacho());
@@ -161,7 +162,6 @@ public class VistaGrilla extends GridPane {
 
             this.add(labelsDir, i,1);
             i++;
-
         }
     }
 
@@ -177,21 +177,12 @@ public class VistaGrilla extends GridPane {
         this.add(label, 2,3);
     }
 
-    public void dibujarGrilla(HashMap<Integer, VistaAscensor> vistaAscensores, Data data) {
+    public void dibujarGrilla(HashMap<Integer, VistaAscensor> vistaAscensores) {
 
         this.vistaAscensores = vistaAscensores;
         propGrilla();
 
-        if (vistaAscensores.isEmpty()){
-
-            labelNoHayAscConectados();
-        } else {
-
-            setearAscensores();
-            setearLabels();
-            setearLLamadas(data);
-            labelsDireccion();
-        }
+        if (vistaAscensores.isEmpty()) labelNoHayAscConectados();
     }
 
     public void update(HashMap<Integer, VistaAscensor> vistaAscensores, Data data) {
@@ -201,14 +192,19 @@ public class VistaGrilla extends GridPane {
         if (this.getChildren().size() == 1) {
 
             this.getChildren().clear();
-            this.dibujarGrilla(vistaAscensores, data);
+            setearAscensores();
+            setearLabels();
+            setearLLamadas(data);
+            labelsDireccion();
         } else {
 
             for (Integer numeroAsc: this.vistaAscensores.keySet()) {
 
-                this.vistaAscensores.get(numeroAsc).actualizar(this.controladorDPC);
+                this.vistaAscensores.get(numeroAsc).actualizar();
                 this.vistaConfiguracion.actualizar(numeroAsc);
             }
+            this.vistaLlamadasExterioresSubir.actualizar();
+            this.vistaLlamadasExterioresBajar.actualizar();
             labelsDireccion();
         }
     }

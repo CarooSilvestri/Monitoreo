@@ -8,7 +8,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import modelo.ascensor.Ascensor;
-import modelo.ascensor.ConfiguracionAscensor;
 
 public class VistaCabina extends VBox {
 
@@ -29,24 +28,26 @@ public class VistaCabina extends VBox {
 
         for (int i = this.ascensor.getParadas(); i > 0; i--) {
 
-            ImageView n = new ImageView("Ascensor vacio.jpg");
-            n.setStyle("-fx-font-size: 10.5px;");
+            ImageView n = new ImageView("AscensorVacio.jpg");
             super.setAlignment(Pos.CENTER);
             super.getChildren().add(n);
 
             if (this.ascensor.getPosAct() == i) {
 
                 GridPane puertas = new GridPane();
-                puertas.setMaxSize(65, 20);
+                puertas.setGridLinesVisible(true);
+                puertas.setMaxSize(65, n.getFitHeight());
                 ImageView imgPuertaL1 = new ImageView(this.controladorCabina.getEstadoCabinaL1() + ".jpg");
+
+                if (this.controladorAscensor.perdido()) imgPuertaL1 = new ImageView("CabinaPerdido.jpg");
 
                 if (!this.controladorAscensor.lado2hab()) {
 
                     ImageView imgPuertaL2 = new ImageView(this.controladorCabina.getEstadoCabinaL2() + ".jpg");
-                    puertas.add(imgPuertaL2, 0, 1);
+                    puertas.add(imgPuertaL2, 0, 0);
                 }
 
-                puertas.add(imgPuertaL1, 0, 0);
+                puertas.add(imgPuertaL1, 0, 1);
                 super.getChildren().add(puertas);
             }
         }
@@ -54,11 +55,11 @@ public class VistaCabina extends VBox {
 
     private void formatoCabina() {
 
-        super.setStyle("-fx-background-color: black;" +
-                "-fx-font-size: 10px;");
-        super.setMinWidth(50);
+        super.setStyle("-fx-background-color: black;");
+        super.setAlignment(Pos.BOTTOM_CENTER);
         super.setPadding(new Insets(0, 2, 0,2));
     }
+
 
     public void dibujarCabina() {
 

@@ -14,7 +14,6 @@ public class ControladorCabina {
         this.vistaCabina = vistaCabina;
     }
 
-
     public String getEstadoCabinaL1() {
 
         return this.cabina.getEstadoCabinaL1();
