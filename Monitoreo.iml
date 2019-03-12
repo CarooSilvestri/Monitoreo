@@ -31,6 +31,6 @@
     </orderEntry>
     <orderEntry type="library" name="jSerialComm-2.4.0" level="project" />
     <orderEntry type="library" name="jssc" level="project" />
-    <orderEntry type="library" name="RXTXcomm1" level="project" />
+    <orderEntry type="library" name="RXTXcomm" level="project" />
   </component>
 </module>
