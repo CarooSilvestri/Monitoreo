@@ -7,6 +7,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import modelo.datos.Data;
+import modelo.herramientas.ListadoFallas;
+import vista.vista_configuracion.VistaConfiguracion;
 import vista.vista_llamadas.exteriores.VistaLlamadasExtBajar;
 import vista.vista_llamadas.exteriores.VistaLlamadasExtSubir;
 
@@ -20,19 +22,19 @@ public class VistaGrilla extends GridPane {
     private HashMap<Integer, VistaAscensor> vistaAscensores;
     private ControladorDPC controladorDPC;
     private int evento;
-    private boolean error;
 
-    public VistaGrilla() {
+    public VistaGrilla(ListadoFallas listadoFallas) {
 
         this.vistaLlamadasExterioresSubir = new VistaLlamadasExtSubir();
         this.vistaLlamadasExterioresBajar = new VistaLlamadasExtBajar();
-        this.vistaConfiguracion = new VistaConfiguracion();
+        this.vistaConfiguracion = new VistaConfiguracion(listadoFallas);
         this.controladorDPC = new ControladorDPC();
     }
 
     private void setearAscensores() {
 
         int i = 1;
+
         for (Integer numeroAsc: this.vistaAscensores.keySet()) {
 
             this.vistaAscensores.get(numeroAsc).dibujarAscensor();
@@ -42,26 +44,8 @@ public class VistaGrilla extends GridPane {
             LAscensor.setAlignment(Pos.CENTER);
             LAscensor.setMinWidth(150);
 
-            this.evento = vistaAscensores.get(numeroAsc).getControladorAscensor().getEvento();
-            Label lEvento = new Label("Estado OK");
-            lEvento.setStyle("-fx-font-size: 10px;" +
-                    "-fx-background-color: #8cd98c;" +
-                    "-fx-font-weight: bold;");
-            if (evento != 255){
-                lEvento.setText(Integer.toString(evento));
-                lEvento.setStyle("-fx-background-color: red;" +
-                        "-fx-font-weight: bold;" +
-                        "-fx-font-size: 10px;");
-                lEvento.setTextFill(Color.WHITE);
-                this.error = true;
-            }
-
-            lEvento.setAlignment(Pos.CENTER);
-            lEvento.setMinWidth(160);
-
-            this.add(lEvento, i, 3);
             this.add(LAscensor, i, 0);
-            this.add(this.vistaAscensores.get(numeroAsc), i, 2);
+            this.add(this.vistaAscensores.get(numeroAsc), i, 2, 1, 2);
             i++;
         }
 
@@ -78,8 +62,8 @@ public class VistaGrilla extends GridPane {
 
         int pisos = data.getAscensores().get(66).getParadas(); // try not to hardcode
 
-        this.vistaLlamadasExterioresBajar.dibujarLlamadas(pisos, data.getDespacho());
-        this.vistaLlamadasExterioresSubir.dibujarLlamadas(pisos, data.getDespacho());
+        this.vistaLlamadasExterioresBajar.dibujarLlamadasExt(pisos, data.getDespacho());
+        this.vistaLlamadasExterioresSubir.dibujarLlamadasExt(pisos, data.getDespacho());
         this.add(this.vistaLlamadasExterioresSubir, 0, 2);
         this.add(this.vistaLlamadasExterioresBajar, 5, 2);
     }
@@ -91,7 +75,7 @@ public class VistaGrilla extends GridPane {
                 "-fx-font-weight: bold;");
         LES.setAlignment(Pos.CENTER);
         LES.setMinWidth(30);
-        this.add(LES, 0,1);
+        this.add(LES, 0,  1);
 
         Label configAscensores = new Label("Configuración y eventos de ascensores");
         configAscensores.setStyle("-fx-font-size: 9px;" +
@@ -112,8 +96,9 @@ public class VistaGrilla extends GridPane {
                 "-fx-background-color: #8cd98c;" +
                 "-fx-font-weight: bold;");
         lEventoDspc.setAlignment(Pos.CENTER);
-        if (this.error) {
-            lEventoDspc.setText(Integer.toString(evento));
+        if (this.controladorDPC.getEvento() != 255) {
+
+            lEventoDspc.setText(Integer.toString(this.controladorDPC.getEvento()));
             lEventoDspc.setStyle("-fx-background-color: red;" +
                     "-fx-font-weight: bold;" +
                     "-fx-font-size: 10px;");
@@ -168,7 +153,7 @@ public class VistaGrilla extends GridPane {
     private void propGrilla() {
 
         this.setAlignment(Pos.CENTER);
-        this.setHgap(10);
+        this.setHgap(5);
     }
 
     public void labelNoHayAscConectados() {
@@ -185,15 +170,15 @@ public class VistaGrilla extends GridPane {
         if (vistaAscensores.isEmpty()) labelNoHayAscConectados();
     }
 
-    public void update(HashMap<Integer, VistaAscensor> vistaAscensores, Data data) {
+    public void update(Data data) {
 
         this.controladorDPC.setDpc(data.getDespacho());
 
         if (this.getChildren().size() == 1) {
 
             this.getChildren().clear();
-            setearAscensores();
             setearLabels();
+            setearAscensores();
             setearLLamadas(data);
             labelsDireccion();
         } else {
@@ -203,8 +188,8 @@ public class VistaGrilla extends GridPane {
                 this.vistaAscensores.get(numeroAsc).actualizar();
                 this.vistaConfiguracion.actualizar(numeroAsc);
             }
-            this.vistaLlamadasExterioresSubir.actualizar();
-            this.vistaLlamadasExterioresBajar.actualizar();
+            this.vistaLlamadasExterioresSubir.actualizar(data.getDespacho());
+            this.vistaLlamadasExterioresBajar.actualizar(data.getDespacho());
             labelsDireccion();
         }
     }

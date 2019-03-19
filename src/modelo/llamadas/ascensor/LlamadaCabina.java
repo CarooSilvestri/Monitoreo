@@ -9,6 +9,7 @@ public class LlamadaCabina extends Llamadas {
     @Override
     public void llenar(LinkedList<Integer> tipoLlamadaa) {
 
+        super.llamadaActiva();
         super.llenar(tipoLlamadaa);
     }
 

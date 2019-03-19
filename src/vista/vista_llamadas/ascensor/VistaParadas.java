@@ -44,6 +44,7 @@ public class VistaParadas extends VBox {
             for (String tipoLlamadaID: botoneraCabina.keySet()) {
 
                 if (botoneraCabina.get(tipoLlamadaID).getLlamadas().contains(i)) {
+
                     switch (tipoLlamadaID) {
 
                         case "LlamadaCabina": botonPiso.setStyle("-fx-background-color: #ADFF2F;" +

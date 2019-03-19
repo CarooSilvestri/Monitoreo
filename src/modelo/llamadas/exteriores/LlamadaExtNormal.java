@@ -9,6 +9,7 @@ public class LlamadaExtNormal extends Llamadas {
     @Override
     public void llenar(LinkedList<Integer> tipoLlamadaa) {
 
+        super.llamadaActiva();
         super.llenar(tipoLlamadaa);
     }
 }

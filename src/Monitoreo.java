@@ -2,14 +2,13 @@ import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.stage.WindowEvent;
 import modelo.datos.Data;
-import modelo.datos.PaqueteDeDatosParcial;
 import modelo.datos.PaqueteDeDatosCompleto;
+import modelo.datos.PaqueteDeDatosParcial;
+import modelo.herramientas.ListadoFallas;
 import vista.VistaPantalla;
 
 import java.io.IOException;
@@ -27,6 +26,7 @@ public class Monitoreo extends Application {
     private static OutputStream salida = null;
     private Thread tRead, tWrite;
     private Data data;
+    private ListadoFallas listadoFallas;
 
     public Monitoreo(){
 
@@ -118,8 +118,10 @@ public class Monitoreo extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        VistaPantalla vistaPantalla = new VistaPantalla();
-        vistaPantalla.dibujar(data);
+        this.listadoFallas = new ListadoFallas();
+
+        VistaPantalla vistaPantalla = new VistaPantalla(this.listadoFallas);
+        vistaPantalla.dibujar();
         new Monitoreo();
 
         Scene scene = new Scene(vistaPantalla, 800, 480);

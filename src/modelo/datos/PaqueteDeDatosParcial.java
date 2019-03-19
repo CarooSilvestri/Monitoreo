@@ -33,6 +33,7 @@ public class PaqueteDeDatosParcial extends LinkedList<Integer> {
 
     public boolean verificarConexionAsc() {
 
+
         return super.get(1) != 255;
     }
 

@@ -8,7 +8,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import modelo.llamadas.ascensor.BajarAscensor;
 import modelo.llamadas.ascensor.LadoAscensor;
-import modelo.llamadas.ascensor.SubirAscensor;
 
 public class VistaAsigBajar extends VBox {
 
@@ -37,7 +36,7 @@ public class VistaAsigBajar extends VBox {
 
             if (bajarAscensor.get(llamadaID).getLlamadas().contains(i)) {
 
-                    llamadaAscIm.setImage(new Image("AnuladaBajar.jpg"));
+                    llamadaAscIm.setImage(new Image("FallaBajar.jpg"));
                 }
             }
 

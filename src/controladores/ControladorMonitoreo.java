@@ -3,16 +3,12 @@ package controladores;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import modelo.Despacho;
-import modelo.datos.Data;
 import modelo.ascensor.Ascensor;
+import modelo.datos.Data;
 import modelo.datos.PaqueteDeDatosCompleto;
-import modelo.datos.PaqueteDeDatosParcial;
-import vista.VistaGrilla;
 import vista.VistaPantalla;
 
 import java.util.HashMap;
-import java.util.Observable;
-import java.util.Observer;
 
 public class ControladorMonitoreo {
 

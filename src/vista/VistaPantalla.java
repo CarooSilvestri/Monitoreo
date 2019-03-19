@@ -1,7 +1,8 @@
 package vista;
 
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
 import modelo.datos.Data;
+import modelo.herramientas.ListadoFallas;
 
 import java.util.HashMap;
 
@@ -11,11 +12,11 @@ public class VistaPantalla extends BorderPane{
     private HashMap<Integer, VistaAscensor> vistaAscensor;
     private VistaMenu vistaMenu;
 
-    public VistaPantalla() {
+    public VistaPantalla(ListadoFallas listadoFallas) {
 
         this.vistaAscensor = new HashMap<Integer, VistaAscensor>();
         this.vistaMenu = new VistaMenu();
-        this.grilla = new VistaGrilla();
+        this.grilla = new VistaGrilla(listadoFallas);
         this.vistaMenu.dibujarMenu();
         this.ubicacionPaneles();
     }
@@ -40,7 +41,7 @@ public class VistaPantalla extends BorderPane{
         }
     }
 
-    public void dibujar(Data data) {
+    public void dibujar() {
 
         this.grilla.dibujarGrilla(this.vistaAscensor);
         ubicacionPaneles();
@@ -49,7 +50,7 @@ public class VistaPantalla extends BorderPane{
     public void actualizar(Data data) {
 
         setearAscensores(data);
-        this.grilla.update(this.vistaAscensor, data);
+        this.grilla.update(data);
     }
 
 }

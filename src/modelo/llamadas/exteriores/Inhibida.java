@@ -9,6 +9,7 @@ public class Inhibida extends Llamadas {
     @Override
     public void llenar(LinkedList<Integer> tipoLlamadaa) {
 
+        super.falla_anulada();
         super.llenar(tipoLlamadaa);
     }
 

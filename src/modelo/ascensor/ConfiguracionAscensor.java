@@ -26,13 +26,13 @@ public class ConfiguracionAscensor {
         String tipoAscBinario = this.manejadorDeStrings.leadingZeros(tipoAsc);
         String tipoAsc2Binario = this.manejadorDeStrings.leadingZeros(tipoAscP2);
 
-        this.configSLC.put("PTT",  configBinario.charAt(0));
-        this.configSLC.put("PuertaDes", configBinario.charAt(1));
-        this.configSLC.put("Ascensorista", configBinario.charAt(2));
-        this.configSLC.put("ServInd", configBinario.charAt(3));
-        this.configSLC.put("Incendio", configBinario.charAt(4));
-        this.configSLC.put("EPD", configBinario.charAt(5));
-        this.configSLC.put("FME", configBinario.charAt(6));
+        this.configSLC.put("PTT",  configBinario.charAt(7));
+        this.configSLC.put("PuertaDes", configBinario.charAt(6));
+        this.configSLC.put("Ascensorista", configBinario.charAt(5));
+        this.configSLC.put("ServInd", configBinario.charAt(4));
+        this.configSLC.put("Incendio", configBinario.charAt(3));
+        this.configSLC.put("EPD", configBinario.charAt(2));
+        this.configSLC.put("FME", configBinario.charAt(1));
         this.tipoAsc = tipoAscBinario.substring(0, 4);
         this.tipoPuertas = tipoAscBinario.substring(4, 8);
         this.tipoAsc2 = tipoAsc2Binario.substring(4, 8);

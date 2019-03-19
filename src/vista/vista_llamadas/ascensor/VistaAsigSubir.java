@@ -3,11 +3,9 @@ package vista.vista_llamadas.ascensor;
 import controladores.ControladorLadoAsc;
 import controladores.controladores_ascensor.ControladorAscensor;
 import javafx.geometry.Pos;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import modelo.llamadas.Subir;
 import modelo.llamadas.ascensor.LadoAscensor;
 import modelo.llamadas.ascensor.SubirAscensor;
 
@@ -38,7 +36,7 @@ public class VistaAsigSubir extends VBox {
 
                 if (subirAscensor.get(llamadaID).getLlamadas().contains(i)) {
 
-                    llamadaAscIm.setImage(new Image("AnuladaSubir.jpg"));
+                    llamadaAscIm.setImage(new Image(llamadaID + ".jpg"));
                 }
             }
 

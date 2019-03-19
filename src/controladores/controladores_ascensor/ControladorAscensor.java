@@ -3,12 +3,8 @@ package controladores.controladores_ascensor;
 import modelo.ascensor.Ascensor;
 import modelo.ascensor.ConfiguracionAscensor;
 import modelo.ascensor.cabina.Cabina;
-import modelo.llamadas.ascensor.BotoneraCabina;
 import modelo.llamadas.ascensor.LadoAscensor;
 import vista.VistaAscensor;
-
-import java.util.HashMap;
-import java.util.LinkedList;
 
 public class ControladorAscensor {
 
@@ -69,5 +65,10 @@ public class ControladorAscensor {
     public LadoAscensor getLado(int lado) {
 
         return this.ascensor.getLlamadas().get(lado);
+    }
+
+    public boolean noConectado() {
+
+        return this.ascensor.getPosAct() == 255;
     }
 }

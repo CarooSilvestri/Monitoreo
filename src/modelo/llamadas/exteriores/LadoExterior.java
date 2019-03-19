@@ -1,8 +1,6 @@
 package modelo.llamadas.exteriores;
 
-import modelo.llamadas.Bajar;
 import modelo.llamadas.Lado;
-import modelo.llamadas.Subir;
 
 import java.util.LinkedList;
 

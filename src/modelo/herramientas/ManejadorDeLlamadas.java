@@ -5,6 +5,7 @@ import java.util.LinkedList;
 public class ManejadorDeLlamadas extends LinkedList<Integer> {
 
     private ManejadorDeStrings manejadorDeStrings;
+    private Character activo = '0';
 
     public ManejadorDeLlamadas() {
 
@@ -12,10 +13,6 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
     }
 
     public void setLlamadas(int pos1, int pos2, int pos3, int pos4) {
-
-        Character activo = '0';
-
-        if (pos1 == 0 && pos2 == 0 && pos3 == 0 && pos4 == 0) activo = '1';
 
         String str1 = this.manejadorDeStrings.leadingZeros(pos1);
         String str2 = this.manejadorDeStrings.leadingZeros(pos2);
@@ -29,6 +26,16 @@ public class ManejadorDeLlamadas extends LinkedList<Integer> {
 
             if (llamadas.charAt(i) == activo) this.add(Math.abs(i - j));
         }
+    }
+
+    public void setActivoLlamadas() {
+
+        this.activo = '0';
+    }
+
+    public void changeActiveFallas() {
+
+        this.activo = '1';
     }
 
     public LinkedList<Integer> getListaLLamadas(LinkedList<Integer> sublista) {

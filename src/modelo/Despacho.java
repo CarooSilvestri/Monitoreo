@@ -2,7 +2,6 @@ package modelo;
 
 import modelo.datos.PaqueteDeDatosParcial;
 import modelo.herramientas.ManejadorDeLlamadas;
-import modelo.llamadas.Lado;
 import modelo.llamadas.exteriores.LadoExterior;
 
 import java.util.HashMap;
@@ -51,6 +50,7 @@ public class Despacho {
 
             // INDICES LADO 1
             LinkedList<Integer> llamadasNExt1 = dataDPC.generarSublista(4, 11);
+          //  System.out.println(llamadasNExt1);
             LinkedList<Integer> llamadasFallas1 = dataDPC.generarSublista(20, 27);
             LinkedList<Integer> llamadasVip1 = dataDPC.generarSublista(36, 43);
 

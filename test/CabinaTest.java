@@ -1,11 +1,3 @@
-import modelo.ascensor.cabina.Cabina;
-import modelo.ascensor.cabina.estado_puerta.PuertaAbierta;
-import modelo.ascensor.cabina.estado_puerta.PuertaCerrada;
-import modelo.ascensor.cabina.estado_puerta.PuertaConBarrera;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-
 public class CabinaTest {
 /*
     char[] p2 = new char[] {0,0,0,0,0,0,0,0};

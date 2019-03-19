@@ -1,8 +1,8 @@
 package modelo.ascensor;
 
+import modelo.ascensor.cabina.Cabina;
 import modelo.datos.PaqueteDeDatosParcial;
 import modelo.herramientas.ManejadorDeLlamadas;
-import modelo.ascensor.cabina.Cabina;
 import modelo.herramientas.ManejadorDeStrings;
 import modelo.llamadas.ascensor.LadoAscensor;
 
@@ -149,12 +149,6 @@ public class Ascensor {
         }
         return listaFinal;
     }
-
-    private LinkedList<Integer> generarListaLado(PaqueteDeDatosParcial datosParcial) {
-
-        return null;
-    }
-
 
     public int getParadas() {
 

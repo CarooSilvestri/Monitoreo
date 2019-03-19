@@ -2,9 +2,7 @@ package controladores;
 
 import modelo.Despacho;
 import modelo.Fallas;
-import modelo.llamadas.Lado;
 import modelo.llamadas.exteriores.LadoExterior;
-import sun.awt.image.ImageWatched;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -27,5 +25,11 @@ public class ControladorDPC {
 
         return this.dpc.getLlamadas();
     }
+
+    public int getEvento() {
+
+        return this.dpc.getEventoDPC();
+    }
+
 
 }

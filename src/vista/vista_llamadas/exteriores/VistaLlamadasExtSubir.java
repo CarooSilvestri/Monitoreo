@@ -2,7 +2,6 @@ package vista.vista_llamadas.exteriores;
 
 import controladores.ControladorLadoExterior;
 import modelo.Despacho;
-import modelo.llamadas.Lado;
 import modelo.llamadas.exteriores.LadoExterior;
 
 import java.util.LinkedList;
@@ -10,13 +9,26 @@ import java.util.LinkedList;
 public class VistaLlamadasExtSubir extends VistaLlamadasExteriores {
 
     private LinkedList<LadoExterior> llamadas;
+    private int pisos;
 
-    public void dibujarLlamadas(int pisos, Despacho despacho) {
+    public void dibujarLlamadasExt(int pisos, Despacho despacho) {
 
+        this.pisos = pisos;
+        this.getChildren().clear();
         this.llamadas = despacho.getLlamadas();
+        int i = 0;
 
-        ControladorLadoExterior controladorLadoExterior = new ControladorLadoExterior(this.llamadas.getFirst());
+        for (LadoExterior lado: this.llamadas) {
 
-        super.dibujarLlamadas(pisos, controladorLadoExterior.getSubir());
+            ControladorLadoExterior controladorLadoExterior = new ControladorLadoExterior(lado);
+          //  System.out.println(lado.getSubir().get("Pasajero").getLlamadas());
+            this.add(super.dibujarLlamadas(pisos, controladorLadoExterior.getSubir()), i, 0);
+            i++;
+        }
+    }
+
+    public void actualizar(Despacho dpc) {
+
+        this.dibujarLlamadasExt(this.pisos, dpc);
     }
 }

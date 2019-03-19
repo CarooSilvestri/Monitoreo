@@ -6,96 +6,361 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/vista/VistaConfiguracion.java" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/src/vista/vista_configuracion/VistaConfiguracion.java" line="55" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87a47152-73d0-4150-b3be-7cf9506f4801" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controladores/ControladorLadoAsc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controladores/ControladorLadoExterior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/LlamadaEnProceso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/BajarAscensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/BotoneraCabina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LadoAscensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAnulada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAsignada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaCabina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaFalla.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/BajarExteriores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LadoExterior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/SubirExteriores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigBajar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigSubir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorListadoFallas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modelo/herramientas/ListadoFallas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/vista_configuracion/VistaContenidoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/vista_configuracion/VistaLogFallas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/vista_configuracion/VistaTiltuloConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Monitoreo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Monitoreo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/RXTXcomm1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/CabinaNegra.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/CabinaNegra.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/cabina perdido.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/ControladorConfiguracion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/controladores/ControladorConfiguracion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codigos de falla SLC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoreo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/Monitoreo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/Monitoreo.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/Monitoreo.jnlp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo.jnlp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/Monitoreo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/Monitoreo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-multibyte-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-private-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/app/Monitoreo.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/app/Monitoreo.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/msvcp140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/msvcr100.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/packager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/THIRDPARTYLICENSEREADME-JAVAFX.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/THIRDPARTYLICENSEREADME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/Welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/JAWTAccessBridge-64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/JavaAccessBridge-64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/WindowsAccessBridge-64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-multibyte-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-private-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/attach.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/awt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/bci.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/concrt140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/dcpr.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/decora_sse.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/deploy.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/dt_shmem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/dt_socket.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/fontmanager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/fxplugins.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/glass.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/glib-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/gstreamer-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/hprof.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/instrument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/j2pcsc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/j2pkcs11.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jaas_nt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/java.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/java_crw_demo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/javafx_font.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/javafx_font_t2k.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/javafx_iio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jawt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jdwp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jfr.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jfxmedia.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jfxwebkit.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jli.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jpeg.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jsdt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jsound.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/jsoundds.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/kcms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/lcms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/management.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/mlib_image.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/msvcp140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/msvcr100.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/net.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/nio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/npt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/plugin2/msvcr100.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/plugin2/npjp2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/prism_common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/prism_d3d.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/prism_sw.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/resource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/sawindbg.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/server/Xusage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/server/classes.jsa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/server/jvm.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/splashscreen.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/sunec.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/sunmscapi.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/t2k.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/ucrtbase.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/unpack.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/vcruntime140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/verify.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/w2k_lsa_auth.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/bin/zip.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/accessibility.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/amd64/jvm.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/calendars.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/charsets.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/classlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/cmm/CIEXYZ.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/cmm/GRAY.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/cmm/LINEAR_RGB.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/cmm/PYCC.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/cmm/sRGB.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/content-types.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/currency.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/RXTXcomm.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/access-bridge-64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/cldrdata.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/dnsns.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/jaccess.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/jfxrt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/localedata.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/meta-index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/nashorn.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/sunec.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/sunjce_provider.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/sunmscapi.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/sunpkcs11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/ext/zipfs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/flavormap.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fontconfig.bfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fontconfig.properties.src" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaBrightDemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaBrightDemiItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaBrightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaBrightRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaSansDemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaSansRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaTypewriterBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/fonts/LucidaTypewriterRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/hijrah-config-umalqura.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/cursors.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/invalid32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/win32_CopyDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/win32_CopyNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/win32_LinkDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/win32_LinkNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/win32_MoveDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/images/cursors/win32_MoveNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/javafx.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/javaws.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/jce.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/jfr.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/jfr/default.jfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/jfr/profile.jfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/jfxswt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/jsse.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/jvm.hprof.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/management-agent.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/management/jmxremote.access" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/management/jmxremote.password.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/management/management.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/management/snmp.acl.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/meta-index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/net.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/plugin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/psfont.properties.ja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/psfontj2d.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/resources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/rt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/blacklist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/blacklisted.certs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/cacerts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/java.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/java.security" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/javaws.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/policy/limited/US_export_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/policy/limited/local_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/policy/unlimited/US_export_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/policy/unlimited/local_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/security/trusted.libraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/sound.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/tzdb.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/runtime/lib/tzmappings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/ucrtbase.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Monitoreo/bundles/Monitoreo/vcruntime140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/AsignadaSubir.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/AsignadaSubir.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/Llamada bajar chica anulada.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/Llamada bajar chica naranja.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/Monitoreo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/Monitoreo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/ControladorConfiguracion.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/ControladorDPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/controladores/ControladorDPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorCabina.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorCabina.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorLlamadaExterior.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorLlamadaExterior.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/ControladorMonitoreo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorAnulacionLlamadas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorAnulacionLlamadas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorAscensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/controladores/controladores_ascensor/ControladorAscensor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/Despacho.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/Despacho.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/Ascensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/Ascensor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/ConfiguracionAscensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/ConfiguracionAscensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/cabina/Cabina.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/cabina/Cabina.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/cabina/Puerta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/ascensor/cabina/Puerta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/datos/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/datos/Data.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/datos/PaqueteDeDatosParcial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/datos/PaqueteDeDatosParcial.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/herramientas/ManejadorDeLlamadas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/herramientas/ManejadorDeLlamadas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Bajar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Bajar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Lado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Lado.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Llamadas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Llamadas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Llamadas2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Subir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/Subir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/BajarAscensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/BajarAscensor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaAnulada.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaAnulada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaAsignada.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaAsignada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaCabina.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaCabina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaFalla.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/LlamadaFalla.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/SubirAscensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/ascensor/SubirAscensor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/BajarExteriores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/BajarExteriores.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/Inhibida.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/Inhibida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/LadoExterior.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/LadoExterior.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/LlamadaExtNormal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/LlamadaExtNormal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/SubirExteriores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/SubirExteriores.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/Vip.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/llamadas/exteriores/Vip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/modelo/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/modelo/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaAscensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaAscensor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaCabina.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaCabina.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaConfiguracion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaConfiguracion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaConfiguracion.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaGrilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaGrilla.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaLogFallas.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaPantalla.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/VistaPantalla.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/VistaAsigBajar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/VistaAsigSubir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/VistaAsignadas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/VistaLlamadasAscensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/VistaLlamadasExteriores.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/VistaParadas$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/VistaParadas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rsc/CabinaNegra.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rsc/CabinaNegra.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rsc/cabina perdido.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controladores/ControladorConfiguracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/ControladorConfiguracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaAsigBajar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaAsigBajar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaAsigSubir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaAsigSubir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaLlamadasAscensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaLlamadasAscensor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaParadas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaParadas$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaParadas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/ascensor/VistaParadas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Monitoreo/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Monitoreo/CabinaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Monitoreo/CabinaTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Monitoreo/DespachoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Monitoreo/DespachoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rsc/AsignadaSubir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rsc/Llamada bajar chica anulada.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rsc/Llamada bajar chica naranja.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monitoreo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monitoreo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controladores/ControladorConfiguracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorConfiguracion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controladores/ControladorDPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/ControladorDPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controladores/ControladorMonitoreo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/ControladorMonitoreo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAnulacionLlamadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAnulacionLlamadas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAscensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAscensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorCabina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorCabina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorLlamadaExterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorLlamadaExterior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorPPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorPPT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/Despacho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Despacho.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/ascensor/Ascensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/ascensor/Ascensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/ascensor/ConfiguracionAscensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/ascensor/ConfiguracionAscensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/ascensor/cabina/Cabina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/ascensor/cabina/Cabina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/ascensor/cabina/Puerta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/ascensor/cabina/Puerta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/datos/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/datos/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/datos/PaqueteDeDatosParcial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/datos/PaqueteDeDatosParcial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/herramientas/ManejadorDeLlamadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/herramientas/ManejadorDeLlamadas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/Bajar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/Bajar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/Lado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/Lado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/Llamadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/Llamadas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/Llamadas2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/Subir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/Subir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/BajarAscensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/BajarAscensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAnulada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAnulada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAsignada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAsignada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaCabina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaCabina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaFalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaFalla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/BajarExteriores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/BajarExteriores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Inhibida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Inhibida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LadoExterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LadoExterior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LlamadaExtNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LlamadaExtNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/SubirExteriores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/SubirExteriores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Vip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Vip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vista/VistaAscensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/VistaAscensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/VistaCabina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/VistaCabina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/VistaConfiguracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/VistaConfiguracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/VistaConfiguracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_configuracion/VistaConfiguracion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vista/VistaGrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/VistaGrilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/VistaLogFallas.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vista/VistaPantalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/VistaPantalla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/VistaAsigBajar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/VistaAsigSubir.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/VistaAsignadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsignadas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/VistaLlamadasAscensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaLlamadasAscensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/VistaLlamadasExteriores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/VistaParadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaParadas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigBajar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigBajar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigSubir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigSubir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaLlamadasAscensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaLlamadasAscensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaParadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaParadas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CabinaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CabinaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/DespachoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/DespachoTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +370,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Monitoreo$Monitoreo.ic" NAME="Monitoreo Coverage Results" MODIFIED="1551462212086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Monitoreo$Monitoreo.ic" NAME="Monitoreo Coverage Results" MODIFIED="1551733149039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Monitoreo$Main.ic" NAME="Main Coverage Results" MODIFIED="1544657491227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
@@ -116,12 +381,13 @@
     <session id="-110272270">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="42" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="43" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.112" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="2" />
@@ -130,13 +396,13 @@
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.26" value="4" />
+          <entry key="project.open.time.26" value="5" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="2" />
-          <entry key="project.open.time.30" value="4" />
+          <entry key="project.open.time.30" value="5" />
           <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.32" value="2" />
-          <entry key="project.open.time.33" value="2" />
+          <entry key="project.open.time.33" value="3" />
           <entry key="project.open.time.34" value="3" />
           <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.36" value="3" />
@@ -164,44 +430,54 @@
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="4" />
           <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="84" />
+          <entry key="project.opened" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bmp" value="2" />
           <entry key="css" value="1" />
+          <entry key="csv" value="1" />
           <entry key="fxml" value="15" />
-          <entry key="java" value="1121" />
+          <entry key="java" value="1310" />
           <entry key="kt" value="1" />
+          <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="1121" />
+          <entry key="JAVA" value="1310" />
           <entry key="Kotlin" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="1" />
           <entry key="XML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="149" />
-          <entry key="java" value="64122" />
+          <entry key="dummy" value="155" />
+          <entry key="java" value="68725" />
           <entry key="txt" value="285" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="64122" />
-          <entry key="PLAIN_TEXT" value="434" />
+          <entry key="JAVA" value="68725" />
+          <entry key="PLAIN_TEXT" value="440" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Monitoreo.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -225,57 +501,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/VistaLlamadasExteriores.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaLlamadasExtSubir.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LlamadaExtNormal.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Inhibida.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Vip.java" />
-        <option value="$PROJECT_DIR$/src/controladores/controladores_menu/ControladorProgramador.java" />
-        <option value="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorLlamadaExterior.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensot.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/LadoAscensor.java" />
-        <option value="$PROJECT_DIR$/src/controladores/ControladorLado.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/SubirExteriores.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/BajarExteriores.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/Bajar.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/Subir.java" />
-        <option value="$PROJECT_DIR$/src/Monitoreo.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.java" />
-        <option value="$PROJECT_DIR$/src/controladores/ControladorDPC.java" />
-        <option value="$PROJECT_DIR$/src/controladores/ControladorLadoExterior.java" />
-        <option value="$PROJECT_DIR$/src/modelo/Despacho.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LadoExterior.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaFalla.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAsignada.java" />
-        <option value="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorCabina.java" />
-        <option value="$PROJECT_DIR$/src/controladores/ControladorLadoAsc.java" />
-        <option value="$PROJECT_DIR$/src/vista/VistaPantalla.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.java" />
-        <option value="$PROJECT_DIR$/src/vista/VistaGrilla.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaLlamadasAscensor.java" />
-        <option value="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAscensor.java" />
-        <option value="$PROJECT_DIR$/src/modelo/datos/Data.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/Lado.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/BajarAscensor.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/Llamadas.java" />
-        <option value="$PROJECT_DIR$/src/modelo/datos/PaqueteDeDatosParcial.java" />
-        <option value="$PROJECT_DIR$/src/modelo/herramientas/ManejadorDeLlamadas.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaCabina.java" />
-        <option value="$PROJECT_DIR$/src/vista/VistaAscensor.java" />
         <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/BotoneraCabina.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaParadas.java" />
         <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LadoAscensor.java" />
         <option value="$PROJECT_DIR$/src/modelo/llamadas/LlamadaEnProceso.java" />
         <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsignadas.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigBajar.java" />
-        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigSubir.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAnulada.java" />
-        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensor.java" />
-        <option value="$PROJECT_DIR$/src/vista/VistaCabina.java" />
-        <option value="$PROJECT_DIR$/src/modelo/ascensor/Ascensor.java" />
         <option value="$PROJECT_DIR$/src/modelo/ascensor/cabina/Cabina.java" />
         <option value="$PROJECT_DIR$/src/modelo/ascensor/cabina/Puerta.java" />
+        <option value="$PROJECT_DIR$/src/vista/VistaCabina.java" />
+        <option value="$PROJECT_DIR$/src/vista/VistaConfiguracion.java" />
+        <option value="$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorListadoFallas.java" />
+        <option value="$PROJECT_DIR$/src/vista/VistaLogFallas.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/BajarAscensor.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensor.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LadoExterior.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/Lado.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaParadas.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/BajarExteriores.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigSubir.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigBajar.java" />
+        <option value="$PROJECT_DIR$/src/Monitoreo.java" />
+        <option value="$PROJECT_DIR$/src/modelo/datos/PaqueteDeDatosParcial.java" />
+        <option value="$PROJECT_DIR$/src/vista/VistaPantalla.java" />
+        <option value="$PROJECT_DIR$/src/controladores/ControladorConfiguracion.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_configuracion/VistaLogFallas.java" />
+        <option value="$PROJECT_DIR$/src/modelo/ascensor/ConfiguracionAscensor.java" />
+        <option value="$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorPPT.java" />
+        <option value="$PROJECT_DIR$/src/controladores/ControladorCheckbox.java" />
+        <option value="$PROJECT_DIR$/src/controladores/ControladorDPC.java" />
+        <option value="$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAscensor.java" />
+        <option value="$PROJECT_DIR$/src/modelo/Despacho.java" />
+        <option value="$PROJECT_DIR$/src/modelo/datos/Data.java" />
+        <option value="$PROJECT_DIR$/src/modelo/ascensor/Ascensor.java" />
+        <option value="$PROJECT_DIR$/src/vista/VistaAscensor.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_configuracion/VistaTnConfig.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_configuracion/VistaContenidoConfig.java" />
+        <option value="$PROJECT_DIR$/src/vista/VistaGrilla.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_configuracion/VistaTiltuloConfig.java" />
+        <option value="$PROJECT_DIR$/src/vista/vista_configuracion/VistaConfiguracion.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Inhibida.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaFalla.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/SubirExteriores.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/Llamadas.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/Vip.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/exteriores/LlamadaExtNormal.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAsignada.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaCabina.java" />
+        <option value="$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAnulada.java" />
+        <option value="$PROJECT_DIR$/src/modelo/herramientas/ManejadorDeLlamadas.java" />
+        <option value="$PROJECT_DIR$/src/modelo/herramientas/ListadoFallas.java" />
       </list>
     </option>
   </component>
@@ -286,8 +562,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
+    <option name="x" value="5" />
+    <option name="y" value="45" />
     <option name="width" value="1278" />
     <option name="height" value="726" />
   </component>
@@ -554,22 +830,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
-          <expand>
-            <path>
-              <item name="Monitoreo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Monitoreo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Monitoreo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Monitoreo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -586,35 +846,23 @@
               <item name="Monitoreo" type="b2602c69:ProjectViewProjectNode" />
               <item name="Monitoreo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="modelo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Monitoreo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Monitoreo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="modelo" type="462c0819:PsiDirectoryNode" />
-              <item name="ascensor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Monitoreo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Monitoreo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="modelo" type="462c0819:PsiDirectoryNode" />
-              <item name="ascensor" type="462c0819:PsiDirectoryNode" />
-              <item name="cabina" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Monitoreo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Monitoreo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="modelo" type="462c0819:PsiDirectoryNode" />
-              <item name="datos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Monitoreo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Monitoreo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vista" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
+          <expand>
+            <path>
+              <item name="Monitoreo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Monitoreo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Monitoreo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Monitoreo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -625,20 +873,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="monitoreo" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="System&#9;PSI&#9;JAVA://java.lang.System" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551412343231" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551918408230" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mfz-rxtx-2.2-20081207-win-x64/RXTXcomm.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Carolina\Documents\Monitoreo\src\modelo" />
+      <recent name="C:\Users\Carolina\Documents\Monitoreo\lib" />
       <recent name="C:\Users\Carolina\Documents\Monitoreo" />
+      <recent name="C:\Users\Carolina\Documents\Monitoreo\rsc" />
+      <recent name="C:\Users\Carolina\Documents\Monitoreo\src\modelo" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="controladores.controladres_configuracion" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -859,6 +1116,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="1" />
@@ -866,10 +1124,10 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.275076" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2986322" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848023" weight="0.37540984" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848023" visible="true" weight="0.4557377" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -888,35 +1146,9 @@
       <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5080214" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" sideWeight="0.49197862" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2712766" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848023" weight="0.37540984" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50151974" side_tool="true" weight="0.38688526" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.26885247" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven Projects" order="1" sideWeight="0.49197862" weight="0.32978722" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5080214" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" sideWeight="0.49197862" weight="0.25" />
-    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -941,294 +1173,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/Bajar.java">
+    <entry file="file://$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorListadoFallas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/ascensor/ConfiguracionAscensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="71" column="65" selection-start-line="71" selection-start-column="65" selection-end-line="71" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Monitoreo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorMonitoreo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/LadoExterior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorLadoExterior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/SubirExteriores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/LlamadaExtNormal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/Inhibida.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/BajarExteriores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorDPC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorConfiguracion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorLlamadaExterior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorLadoAsc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaFalla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/VistaGrilla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaLlamadasAscensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAscensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorCabina.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/Subir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/BajarAscensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/Lado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAsignada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/Despacho.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/datos/PaqueteDeDatosParcial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/herramientas/ManejadorDeLlamadas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/Llamadas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/VistaPantalla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/VistaLogFallas.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/VistaConfiguracion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaCabina.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/BotoneraCabina.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/LlamadaEnProceso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/herramientas/ManejadorDeStrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsignadas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigBajar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1239,58 +1194,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensor.java">
+    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorLadoExterior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/javafx-src.zip!/javafx/scene/image/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="1109" selection-start-line="1109" selection-end-line="1109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/LadoExterior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsignadas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/Lado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="23" column="76" lean-forward="true" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtBajar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="96" selection-start-line="22" selection-start-column="96" selection-end-line="22" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/BajarExteriores.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigBajar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaAsigSubir.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAnulada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="426">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/ascensor/VistaParadas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="48" column="95" selection-start-line="48" selection-start-column="95" selection-end-line="48" selection-end-column="95" />
+        <state relative-caret-position="367">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/VistaAscensor.java">
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/BajarAscensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/datos/Data.java">
+    <entry file="file://$PROJECT_DIR$/src/modelo/datos/PaqueteDeDatosParcial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/VistaCabina.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="50" column="45" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1301,33 +1285,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/ascensor/cabina/Cabina.java">
+    <entry file="file://$PROJECT_DIR$/src/vista/VistaPantalla.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="426">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/ascensor/cabina/Puerta.java">
+    <entry file="file://$PROJECT_DIR$/src/modelo/ascensor/ConfiguracionAscensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        <state relative-caret-position="647">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorCheckbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorPPT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controladores/controladres_configuracion/ControladorConfiguracion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="49" lean-forward="true" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controladores/controladores_ascensor/ControladorAscensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/Despacho.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/datos/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExteriores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="32" column="54" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_llamadas/exteriores/VistaLlamadasExtSubir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorDPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/VistaAscensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/VistaGrilla.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="904">
+          <caret line="158" column="43" lean-forward="true" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_configuracion/VistaTiltuloConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_configuracion/VistaContenidoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controladores/ControladorMonitoreo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_configuracion/VistaLogFallas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/SubirExteriores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/ascensor/Ascensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="75" column="92" lean-forward="true" selection-start-line="75" selection-start-column="92" selection-end-line="75" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getEvento#0;class#Ascensor#0" />
-            <element signature="method#getDirProx#0;class#Ascensor#0" />
-            <element signature="method#getDirAct#0;class#Ascensor#0" />
-            <element signature="method#getLado2Hab#0;class#Ascensor#0" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="98" column="64" lean-forward="true" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/BotoneraCabina.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/SubirAscensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/Inhibida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaFalla.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/Subir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/Llamadas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/vista_configuracion/VistaConfiguracion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/Vip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/exteriores/LlamadaExtNormal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAnulada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaAsignada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitoreo.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/herramientas/ListadoFallas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/herramientas/ManejadorDeLlamadas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/llamadas/ascensor/LlamadaCabina.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monitoreo.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -1360,6 +1553,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>rxtx-2.1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1396,7 +1590,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>RXTXcomm1</last-edited>
+          <last-edited>RXTXcomm</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

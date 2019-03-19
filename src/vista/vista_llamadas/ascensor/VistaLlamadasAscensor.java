@@ -4,9 +4,6 @@ import controladores.controladores_ascensor.ControladorAscensor;
 import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-
 public class VistaLlamadasAscensor extends GridPane {
 
     private VistaAsignadas vistaAsignadasL1;

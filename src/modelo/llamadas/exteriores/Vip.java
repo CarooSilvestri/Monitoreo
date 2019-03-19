@@ -6,16 +6,10 @@ import java.util.LinkedList;
 
 public class Vip extends Llamadas {
 
-    private LinkedList<Integer> llamadas;
-
-    public void a() {
-
-        this.llamadas = super.getLlamadas();
-        System.out.println(this.llamadas);
-    }
     @Override
     public void llenar(LinkedList<Integer> tipoLlamadaa) {
 
+        super.llamadaActiva();
         super.llenar(tipoLlamadaa);
     }
 }
